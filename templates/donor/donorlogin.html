@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donor Management | Donor Login</title>
+    <link
+    rel="stylesheet"
+    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
+  />
+  <link rel="stylesheet" href="../static/css/style.css" />
+</head>
+<body>
+    <nav
+      style="background-color: #ff0018"
+      class="navbar navbar-expand-md navbar-dark fixed-top"
+    >
+      <a href="/" class="navbar-brand"
+        ><i class="fas fa-heartbeat"></i>&nbsp; Blood Donor Management System</a
+      >
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-toggle="collapse"
+        data-target="#navbarCollapse"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse justify-content-between"
+        id="navbarCollapse"
+      >
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="{% url 'adminstrator:home' %}"
+                ><i class="fas fa-home"></i>&nbsp; Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="{% url 'patient:login' %}"
+                ><i class="fas fa-procedures"></i>&nbsp; Patient</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="{% url 'donor:login' %}"
+                ><i class="fas fa-user"></i>&nbsp; Donor</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="{% url 'adminstrator:login' %}"
+                ><i class="fas fa-user-shield"></i>&nbsp; Admin</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="wrap" id="wrap">
+        <div class="wrapper" id="wrapper">
+          <form action="">
+            <h1>Donor Login</h1>
+            <div class="input-box">
+              <input type="text" placeholder="Username" required />
+              <i class="bx bxs-user"></i>
+            </div>
+            <div class="input-box">
+              <input type="password" placeholder="Password" required />
+              <i class="bx bxs-lock-alt"></i>
+            </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox" />Remember Me</label>
+              <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn">Login</button>
+            <div class="register-link">
+                <p>Dont have an account? <span id="register" style="font-size: 17px;cursor:pointer">Register</span></p>
+              </div>
+          </form>
+        </div>
+        <div class="reg-wrapper" id="reg-wrapper">
+          <form action="">
+            <h1>Donor Registration</h1>
+            <div class="input-box">
+                <div class="name">First Name</div>
+              <input type="text" required />
+              
+            </div>
+            <div class="input-box">
+                <div class="name">Last Name</div>
+              <input type="text" required />
+              
+            </div>
+            <div class="input-box">
+                <div class="name">Username</div>
+              <input type="text" required />
+              
+            </div>
+            <div class="input-box">
+                <div class="name">Email Address</div>
+              <input type="email" required />
+             
+            </div>
+            <div class="input-box">
+                <div class="name">Password</div>
+              <input type="password" required />
+              
+            </div>
+            
+                
+                <div class="form-row">
+                  <div class="name">Blood Group</div>
+                  <div class="value">
+                      <div class="input-group">
+                          <div class="rs-select2 js-select-simple select--no-search">
+                              <select name="bloodgroup">
+                                  <option disabled="disabled" selected="selected">Choose option</option>
+                                  <option>O+</option>
+                                  <option>O-</option>
+                                  <option>A+</option>
+                                  <option>A-</option>
+                                  <option>B+</option>
+                                  <option>B-</option>
+                                  <option>AB+</option>
+                                  <option>AB-</option>
+                              </select>
+                              <div class="select-dropdown"></div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+            
+            <div class="input-box">
+              <div class="name">Address</div>
+            <input type="text" required />
+            
+          </div>
+          <div class="input-box">
+            <div class="name">Mobile Number</div>
+          <input type="text" required />
+          
+        </div>
+        <div class="input-box">
+          <div class="name">Profile Picture</div>
+        <input type="file" placeholder="No file chosen" required />
+        
+      </div>
+            <div class="remember-forgot">
+              <label><input type="checkbox" />Remember Me</label>
+              <a href="#">Forgot Password</a>
+            </div>
+            <button type="submit" class="btn" id="register">Register</button>
+            <div class="register-link">
+                <p>Already have an account? <span id="login" style="font-size: 17px;cursor:pointer" onclick="log()">Login</span></p>
+              </div>
+          </form>
+        </div>
+      </div>
+        <div class="footer">
+          <p>
+            Blood Donor Management System
+            <br />
+            Made In Uganda &copy; 2023
+          </p>
+        </div>
+        
+        <script src="../static/js/script.js"></script>
+</body>
+</html>

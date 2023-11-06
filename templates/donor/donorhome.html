@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donor</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      .container {
+        padding: 2rem;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .sidebar {
+        display: flex;
+
+        flex-direction: column;
+        margin-left: -20%;
+        gap: 10px;
+        width: 15vw;
+        background-color: rgb(54, 51, 54);
+        height: 100vh;
+      }
+      .sidebar ul {
+        list-style: none;
+
+        margin-left: -40px;
+      }
+      .sidebar ul li {
+        border: 1px solid rgb(146, 144, 146);
+
+        padding: 10px;
+      }
+      .sidebar ul li:hover {
+        background-color: rgb(62, 62, 127);
+      }
+      .sidebar ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .sidebar a i {
+        margin-right: 10px;
+      }
+      .main-body {
+        display: flex;
+        margin-top: 40px;
+        gap: 20px;
+      }
+      .card {
+        height: 20vh;
+        padding: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-danger">
+      <a style="color: white" class="navbar-brand" href="/"
+        ><i class="fab fa-gratipay"></i>&nbsp;<font
+          face="Comic sans MS"
+          size="4"
+          >Blood Bank Management System</font
+        ></a
+      >
+
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: white" href="../admin/index.html"
+              >Logout &nbsp; <i class="fas fa-sign-out-alt"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="donorhome.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="donate.html"
+              ><i class="fa fa-hand-holding-medical"></i>Donate Blood</a
+            >
+          </li>
+          <li>
+            <a href="donationhistory.html"
+              ><i class="fa fa-history"></i>Donation History</a
+            >
+          </li>
+          <li>
+            <a href="request.html"
+              ><i class="fa fa-sync-alt"></i>Blood Request</a
+            >
+          </li>
+          <li>
+            <a href="requesthistory.html"
+              ><i class="fa fa-history"></i>Request History</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="main-body">
+        <div class="card">
+          <div class="info">
+            <p>Requests Made</p>
+            <p>0</p>
+          </div>
+          <i class="fa-solid fa-rotate-right"></i>
+        </div>
+        <div class="card">
+          <div class="info">
+            <p>Pending Requests</p>
+            <p>0</p>
+          </div>
+          <i class="fa-solid fa-rotate-right"></i>
+        </div>
+        <div class="card">
+          <div class="info">
+            <p>Approved Requests</p>
+            <p>0</p>
+          </div>
+          <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div class="card">
+          <div class="info">
+            <p>Rejected Requests</p>
+            <p>0</p>
+          </div>
+          <i class="fa-solid fa-rectangle-xmark"></i>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

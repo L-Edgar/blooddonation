@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donor</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
+    />
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+
+      body{
+        background-color: rgb(96, 96, 215);
+      }
+
+      .container {
+        display: flex;
+        justify-content: space-between;
+      }
+      .sidebar {
+        margin-left: -20%;
+        background-color: rgb(54, 51, 54);
+        height: 100vh;
+        width: 15vw;
+      }
+      .sidebar ul {
+        list-style: none;
+        margin-top: 70px;
+        margin-left: -30px;
+      }
+      .sidebar ul li {
+        border: 1px solid rgb(146, 144, 146);
+        padding: 10px;
+      }
+      .sidebar ul li:hover {
+        background-color: rgb(62, 62, 127);
+      }
+      .sidebar ul li i{
+        margin-right: 10px;
+      }
+      .sidebar ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+      }
+      
+      .blood-requests{
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        background: blur transparent;
+        border: 2px solid rgb(146, 144, 146);
+        height: 65vh;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        width: 25vw;
+        color:#fff;
+        margin-right: 30%;
+        
+      }
+      .blood-requests form{
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+      }
+      .blood-requests form input{
+        outline: none;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 5px;
+      } 
+      .blood-requests form button{
+        background-color: rgb(253, 3, 3);
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        width: 10vw;
+        margin-left: 25px;
+      }
+      .blood-requests form button:hover{
+        background-color: #e600ff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-danger">
+      <a style="color: white" class="navbar-brand" href="/"
+        ><i class="fab fa-gratipay"></i>&nbsp;<font
+          face="Comic sans MS"
+          size="4"
+          >Blood Bank Management System</font
+        ></a
+      >
+
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: white" href="../admin/index.html"
+              >Logout &nbsp; <i class="fas fa-sign-out-alt"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="donorhome.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="donate.html"
+              ><i class="fa fa-hand-holding-medical"></i>Donate Blood</a
+            >
+          </li>
+          <li>
+            <a href="donationhistory.html"
+              ><i class="fa fa-history"></i>Donation History</a
+            >
+          </li>
+          <li>
+            <a href="request.html"
+              ><i class="fa fa-sync-alt"></i>Blood Request</a
+            >
+          </li>
+          <li>
+            <a href="requesthistory.html"
+              ><i class="fa fa-history"></i>Request History</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="blood-requests">
+        <h3>Make Blood Request</h3>
+    <form action="">
+        <label for="patientname">Patient Name</label>
+        <input type="text" name="patientname" id="patientname">
+        <label for="patientname">Patient Age</label>
+        <input type="text" name="patientname" id="patientname">
+        <label for="patientname">Reason</label>
+        <input type="text" name="patientname" id="patientname">
+        <div class="form-row">
+            <div class="name">Blood Group</div>
+            <div class="value">
+                <div class="input-group">
+                    <div class="rs-select2 js-select-simple select--no-search">
+                        <select name="bloodgroup">
+                            <option disabled="disabled" selected="selected">Choose option</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                        </select>
+                        <div class="select-dropdown"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <label for="patientname">Unit in ml</label>
+        <input type="number" name="patientname" id="patientname" placeholder="0">
+        <button>Request</button>
+    </form>
+      </div>
+    </div>
+  </body>
+</html>

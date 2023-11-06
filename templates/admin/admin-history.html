@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
+    />
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .sidebar{
+            margin-left: -20%;
+            background-color: rgb(54, 51, 54);
+            height: 100vh;
+            width: 15vw;
+    
+        }
+        .sidebar ul{
+            list-style: none;
+            margin-top: 70px;
+            margin-left: -30px;
+        }
+        .sidebar ul li{
+            border: 1px solid rgb(146, 144, 146);
+            padding: 10px;
+        }
+        .sidebar ul li:hover{
+            background-color: rgb(62, 62, 127);
+        }
+        .sidebar ul i{
+          margin-right: 10px;
+        }
+        .sidebar ul li a{
+            text-decoration: none;
+            color: #fff;
+            font-size: 20px;
+        }
+        .donation-history{
+           margin-top: -10%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .donation-history table{
+            width: 65vw;
+            height: 50vh;
+            
+            
+            
+        }
+        .donation-history table thead{
+            background-color: rgb(22, 184, 216);
+            
+        }
+        .donation-history table thead th{
+            padding: 10px;
+            border: 1px solid #fff;
+            
+        }
+        .donation-history table tbody tr td{
+            padding: 5px;
+            
+            
+        }
+        .donation-history table tbody tr td button{
+            outline: none;
+            background-color:green;
+            color: #fff;
+            border-radius: 10px;
+            padding: 5px;
+        }
+      </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-danger">
+        <a style="color: white" class="navbar-brand" href="/"
+          ><i class="fab fa-gratipay"></i>&nbsp;<font
+            face="Comic sans MS"
+            size="4"
+            >Blood Bank Management System</font
+          ></a
+        >
+  
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="index.html"
+                >Logout &nbsp; <i class="fas fa-sign-out-alt"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container">
+        <div class="sidebar">
+          <ul>
+            <li>
+              <a href="admin-dashboard.html"><i class="fas fa-home"></i>Home</a>
+            </li>
+            <li>
+              <a href="admin-donor.html"
+                ><i class="fa fa-user"></i>Donor</a
+              >
+            </li>
+            <li>
+              <a href="admin-patient.html"
+                ><i class="fas fa-user-injured"></i>Patient</a
+              >
+            </li>
+            <li>
+              <a href="admin-donations.html"
+                ><i class="fas fa-hand-holding-medical"></i>Donations</a
+              >
+            </li>
+            <li>
+              <a href="admin-requests.html"
+                ><i class="fas fa-sync-alt"></i>Blood Requests</a
+              >
+            </li>
+            <li>
+              <a href="admin-history.html"
+                ><i class="fas fa-history"></i>Request History</a
+              >
+            </li>
+            <li>
+              <a href="admin-stock.html"
+                ><i class="fas fa-hand-holding-water"></i>Blood Stock</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="donation-history">
+            <h3 style="margin-bottom: 7%;">BLOOD REQUESTS HISTORY</h3>
+            <table  >
+                <thead>
+                    <th >Patient Name</th>
+                    <th >Age</th>
+                    <th >Reason</th>
+                    <th>Blood Group</th>
+                    <th>Unit in ml</th>
+                    <th >Request Date</th>
+                    <th>Status</th>
+                    <th colspan="2">Action</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Edd</td>
+                        <td>57</td>
+                        <td>Sick</td>
+                        <td>O</td>
+                        <td>2</td>
+                        <td>21 June, 2021</td>
+                        <td><button>Approved</button></td>
+                        <td><button style="">1 Unit added to stock</button></td>
+                    </tr>
+                    <tr>
+                        <td>Edd</td>
+                        <td>57</td>
+                        <td>Sick</td>
+                        <td>O</td>
+                        <td>2</td>
+                        <td>21 June, 2021</td>
+                        <td><button>Approved</button></td>
+                        <td><button style="">1 Unit added to stock</button></td>
+                    </tr>
+                    <tr>
+                        <td>Edd</td>
+                        <td>57</td>
+                        <td>Sick</td>
+                        <td>O</td>
+                        <td>2</td>
+                        <td>21 June, 2021</td>
+                        <td><button>Approved</button></td>
+                        <td><button style="">1 Unit added to stock</button></td>
+                    </tr>
+                    <tr>
+                        <td>Edd</td>
+                        <td>57</td>
+                        <td>Sick</td>
+                        <td>O</td>
+                        <td>2</td>
+                        <td>21 June, 2021</td>
+                        <td><button>Approved</button></td>
+                        <td style="text-align: left;"><button style="">1 Unit added to stock</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+      </div>
+</body>
+</html>

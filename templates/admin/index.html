@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Donation</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css">
+
+    <link rel="stylesheet" href="{%static 'css/style.css' static%}">
+    
+  
+</head>
+<body>
+    <nav style="background-color: #FF0018;" class="navbar navbar-expand-md navbar-dark fixed-top">
+        <a href="/" class="navbar-brand"><i class="fas fa-heartbeat"></i>&nbsp; Blood Donor Management System</a>
+        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+  
+  
+          <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="{% url 'adminstrator:home' %}"><i class="fas fa-home"></i>&nbsp; Home</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="{% url 'patient:login' %}"><i class="fas fa-procedures"></i>&nbsp; Patient</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="{% url 'donor:login' %}"><i class="fas fa-user"></i>&nbsp; Donor</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" style="color: white;" href="{% url 'adminstrator:login' %}"><i class="fas fa-user-shield"></i>&nbsp; Admin</a>
+                  </li>
+                  
+              </ul>
+          </div>
+  
+  
+  
+  
+        </div>
+      </nav>
+      
+<section id="section-jumbotron" style="margin-bottom: 0px;" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center xyz">
+    <div class="container text-center">
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+     
+      
+      <br><br><br><br>
+      
+    </div>  
+  </section>
+  <div class="jumbotron" style="margin-top: 0px;margin-bottom: 0px;">
+
+    <p class="lead text-center">“Take a step to save someone's life today.”
+      </p>
+    
+    <p class="text-center">- Eddie Coder</p>
+    
+  </div>
+  <div class="footer">
+    <p>Blood Donor Management System
+        <br>
+        Made In Uganda &copy; 2023
+    </p>
+  
+  </div>
+    
+</body>
+</html>

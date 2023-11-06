@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.css"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+      }
+      body {
+        background: -webkit-gradient(
+          linear,
+          left bottom,
+          right top,
+          from(#08aeea),
+          to(#b721ff)
+        );
+        background: -webkit-linear-gradient(
+          bottom left,
+          #08aeea 0%,
+          #b721ff 100%
+        );
+        background: -moz-linear-gradient(bottom left, #08aeea 0%, #b721ff 100%);
+        background: -o-linear-gradient(bottom left, #08aeea 0%, #b721ff 100%);
+        background: linear-gradient(to top right, #08aeea 0%, #b721ff 100%);
+        display: flex;
+        justify-content: center;
+        height: 180vh;
+        overflow: hidden;
+      }
+      .container {
+        padding: 2rem;
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .sidebar {
+        display: flex;
+
+        flex-direction: column;
+        margin-left: -21%;
+        gap: 10px;
+        width: 15vw;
+        background-color: rgb(54, 51, 54);
+        height: 100%;
+      }
+      .sidebar ul {
+        list-style: none;
+
+        margin-left: -40px;
+      }
+      .sidebar ul li {
+        border: 1px solid rgb(146, 144, 146);
+
+        padding: 10px;
+      }
+      .sidebar ul li:hover {
+        background-color: rgb(62, 62, 127);
+      }
+      .sidebar ul li a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 20px;
+      }
+
+      .sidebar a i {
+        margin-right: 10px;
+      }
+      .request {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10%;
+        background: blur transparent;
+        border: 2px solid rgb(146, 144, 146);
+        height: 65vh;
+        justify-content: center;
+        align-items: center;
+        border-radius: 10px;
+        width: 25vw;
+        color: #fff;
+        margin-right: 30%;
+      }
+      .request form {
+        display: flex;
+        flex-direction: column;
+        color: #fff;
+      }
+      .request form input {
+        outline: none;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      .request form button {
+        background-color: rgb(253, 3, 3);
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        width: 10vw;
+        margin-left: 25px;
+      }
+      .request form button:hover {
+        background-color: #e600ff;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-danger">
+      <a style="color: white" class="navbar-brand" href="/"
+        ><i class="fab fa-gratipay"></i>&nbsp;<font
+          face="Comic sans MS"
+          size="4"
+          >Blood Bank Management System</font
+        ></a
+      >
+
+      <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" style="color: white" href="../admin/index.html"
+              >Logout &nbsp; <i class="fas fa-sign-out-alt"></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container">
+      <div class="sidebar">
+        <ul>
+          <li>
+            <a href="patienthome.html"><i class="fas fa-home"></i>Home</a>
+          </li>
+          <li>
+            <a href="patientrequests.html"
+              ><i class="fa fa-sync-alt"></i>Make Requests</a
+            >
+          </li>
+          <li>
+            <a href="requesthistory.html"
+              ><i class="fa fa-history"></i>Request History</a
+            >
+          </li>
+        </ul>
+      </div>
+
+      <div class="request">
+        <h3>Make Blood Request</h3>
+        <form action="">
+          <label for="patientname">Patient Name</label>
+          <input type="text" name="patientname" id="patientname" />
+          <label for="patientname">Patient Age</label>
+          <input type="text" name="patientname" id="patientname" />
+          <label for="patientname">Reason</label>
+          <input type="text" name="patientname" id="patientname" />
+          <div class="form-row">
+            <div class="name">Blood Group</div>
+            <div class="value">
+              <div class="input-group">
+                <div class="rs-select2 js-select-simple select--no-search">
+                  <select name="bloodgroup">
+                    <option disabled="disabled" selected="selected">
+                      Choose option
+                    </option>
+                    <option>O+</option>
+                    <option>O-</option>
+                    <option>A+</option>
+                    <option>A-</option>
+                    <option>B+</option>
+                    <option>B-</option>
+                    <option>AB+</option>
+                    <option>AB-</option>
+                  </select>
+                  <div class="select-dropdown"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <label for="patientname">Unit in ml</label>
+          <input
+            type="number"
+            name="patientname"
+            id="patientname"
+            placeholder="0"
+          />
+          <button>Request</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
