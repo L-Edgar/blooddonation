@@ -1,9 +1,13 @@
 from django import forms
 from django.contrib.auth.models import User
 from . import models
+from django.forms import PasswordInput
+from django.contrib.auth.forms import UserCreationForm
+from django.forms.widgets import TextInput
 
 
 class PatientUserForm(forms.ModelForm):
+    password = forms.CharField(widget=PasswordInput)
     class Meta:
         model=User
         fields=['first_name','last_name','username','password']
@@ -30,3 +34,12 @@ class PatientForm(forms.ModelForm):
    #     'password': forms.PasswordInput()
    #     }
         
+
+class CustomUserCreationForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['first_name', 'last_name', 'username', 'password1', 'password2']
+        
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)

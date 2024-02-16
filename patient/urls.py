@@ -6,7 +6,8 @@ from . import views
 app_name='patient'
 urlpatterns = [
     #path('patientlogin', LoginView.as_view(template_name='patient/patientlogin.html'),name='patientlogin'),
-    path('patientlogin',views.loginView,name='loginView'),
+    path('patientlogin',views.loginView,name='patientlogin'),
+    path('patientlogout',views.logout,name='logout'),
     path('patientsignup', views.patient_signup_view,name='patientsignup'),
     path('patient-dashboard', views.patient_dashboard_view,name='patient-dashboard'),
     path('make-request', views.make_request_view,name='make-request'),

@@ -11,6 +11,10 @@ class DonorUserForm(forms.ModelForm):
         'password': forms.PasswordInput()
         }
 
+    def __init__(self,*args,**kwargs):
+        super().__init__(*args,**kwargs)
+        self.fields['password'].required=False
+
 class DonorForm(forms.ModelForm):
     class Meta:
         model=models.Donor

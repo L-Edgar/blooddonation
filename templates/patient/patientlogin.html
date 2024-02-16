@@ -31,7 +31,7 @@
                     <h2 class="title">Patient Login</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" action="{% url 'patient:loginView' %}">
+                    <form method="POST" action="{% url 'patient:patientlogin' %}">
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="name">Username</div>

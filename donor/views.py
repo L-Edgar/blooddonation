@@ -10,6 +10,33 @@ from django.core.mail import send_mail
 from django.contrib.auth.models import User
 from blood import forms as bforms
 from blood import models as bmodels
+from django.contrib import messages
+from django.contrib.auth import login, authenticate
+
+def loginView(request):
+    #messages.success(request,'')
+    print(f"Request method: {request.method}")
+    if request.method=='POST':
+        loginform=forms.DonorUserForm(request.POST)
+
+        if loginform.is_valid():
+            username=loginform.cleaned_data['username']
+            password=loginform.cleaned_data['password']
+            user=authenticate(request,username=username,password=password)
+            if user:
+                login(request,user)
+                return redirect('donor_dashboard_view')
+            else:
+                messages.info(request,'Invalid Credentials')
+                return redirect("loginView")
+        else:
+            print(f"Form errors: {loginform.errors}")
+            
+    else:
+        loginform = forms.DonorUserForm()  # An unbound form
+        print("unsuccessful")
+        
+    return render(request,'donor/donorlogin.html',{'loginform':loginform})
 
 def donor_signup_view(request):
     userForm=forms.DonorUserForm()

@@ -39,7 +39,7 @@
                             <div class="name">First Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    {% render_field userForm.first_name|attr:'required:true'  class="input--style-5"  %}
+                                    {% render_field userForm.first_name|attr:'required:True'  class="input--style-5"  %}
                                 </div>
                             </div>
                         </div>
@@ -48,7 +48,7 @@
                             <div class="name">Last Name</div>
                             <div class="value">
                                 <div class="input-group">
-                                    {% render_field userForm.last_name|attr:'required:true'  class="input--style-5"  %}
+                                    {% render_field userForm.last_name|attr:'required:True'  class="input--style-5"  %}
                                 </div>
                             </div>
                         </div>
@@ -57,7 +57,7 @@
                             <div class="name">Username</div>
                             <div class="value">
                                 <div class="input-group">
-                                    {% render_field userForm.username|attr:'required:true'  class="input--style-5"  %}
+                                    {% render_field userForm.username|attr:'required:True'  class="input--style-5"  %}
                                 </div>
                             </div>
                         </div>
@@ -66,12 +66,21 @@
                             <div class="name">Password</div>
                             <div class="value">
                                 <div class="input-group">
-                                    {% render_field userForm.password|attr:'required:true'  class="input--style-5"  %}
+                                    {% render_field userForm.password1|attr:'required:True'  class="input--style-5"  %}
                                 </div>
                             </div>
                         </div>
 
                         <div class="form-row">
+                            <div class="name">Confirm Password</div>
+                            <div class="value">
+                                <div class="input-group">
+                                    {% render_field userForm.password2|attr:'required:True'  class="input--style-5"  %}
+                                </div>
+                            </div>
+                        </div>
+
+                       <!-- <div class="form-row">
                             <div class="name">Age</div>
                             <div class="value">
                                 <div class="input-group">
@@ -150,7 +159,7 @@
                         </div>
 
    
-  
+                    -->
   
 
                         <div>

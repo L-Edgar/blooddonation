@@ -12,7 +12,8 @@ from blood import forms as bforms
 from django.contrib.auth import login, authenticate
 from blood import models as bmodels
 from django.contrib import messages
-
+from django.contrib import auth
+from django.contrib.auth.forms import UserCreationForm
 
 def loginView(request):
     messages.success(request,'')
@@ -23,12 +24,17 @@ def loginView(request):
         if loginform.is_valid():
             username=loginform.cleaned_data['username']
             password=loginform.cleaned_data['password']
-            user=authenticate(request,username=username,password=password)
-            if user:
-                login(request,user)
-                return redirect('patient_dashboard_view')
+            existing_user=User.objects.filter(username=username).first()
+            if existing_user:
+                user = authenticate(request, username=username, password=password)
+                if user:
+                    login(request,user)
+                    return redirect('patient_dashboard_view')
+                else:
+                    messages.info(request,'Invalid Credentials')
+                    return redirect('loginView')
             else:
-                messages.info(request,'Invalid Credentials')
+                messages.info(request, 'User does not exist')
                 return redirect('loginView')
         else:
             print(f"Form errors: {loginform.errors}")
@@ -40,25 +46,53 @@ def loginView(request):
     return render(request,'patient/patientlogin.html',{'loginform':loginform})
 
 
+
+def logout(request):
+    auth.logout(request)
+    return redirect("blood/logout.html")
+
 def patient_signup_view(request):
-    userForm=forms.PatientUserForm()
-    patientForm=forms.PatientForm()
-    mydict={'userForm':userForm,'patientForm':patientForm}
+    #userForm=forms.PatientUserForm()
+    #patientForm=forms.PatientForm()
+    #mydict={'userForm':userForm,'patientForm':patientForm}
+    userForm=forms.CustomUserCreationForm()
+    
+    
     if request.method=='POST':
-        userForm=forms.PatientUserForm(request.POST)
-        patientForm=forms.PatientForm(request.POST,request.FILES)
-        if userForm.is_valid() and patientForm.is_valid():
-            user=userForm.save()
-            user.set_password(user.password)
-            user.save()
-            patient=patientForm.save(commit=False)
-            patient.user=user
-            patient.bloodgroup=patientForm.cleaned_data['bloodgroup']
-            patient.save()
-            my_patient_group = Group.objects.get_or_create(name='PATIENT')
-            my_patient_group[0].user_set.add(user)
-        return HttpResponseRedirect('patientlogin')
-    return render(request,'patient/patientsignup.html',context=mydict)
+        userForm=forms.CustomUserCreationForm(request.POST)
+        #userForm=forms.PatientUserForm(request.POST)
+        #patientForm=forms.PatientForm(request.POST,request.FILES)
+        
+            
+        if userForm.is_valid():
+            password1=userForm.cleaned_data['password1']
+            password2=userForm.cleaned_data['password2']
+            username=userForm.cleaned_data['username']
+            
+            if password1==password2:
+                 if forms.CustomUserCreationForm.Meta.model.objects.filter(username=username).exists():
+                    messages.error(request, 'Passwords do not match.')
+                    
+                    return render(request, 'patient/patientsignup.html', {'userForm': userForm})
+                    
+                 else:
+                    userForm.save()
+                    #user.set_password(user.password)
+                    
+                    
+                #patient=patientForm.save(commit=False)
+                #patient.user=user
+                #patient.bloodgroup=patientForm.cleaned_data['bloodgroup']
+                #patient.save()
+                #my_patient_group = Group.objects.get_or_create(name='PATIENT')
+                #my_patient_group[0].user_set.add(user)
+                    return redirect('/patient/patientlogin')
+        else:
+            print(userForm.errors)
+    else:
+        userForm=forms.CustomUserCreationForm()
+        print('Error 3')
+    return render(request,'patient/patientsignup.html',{'userForm': userForm})
 
 @login_required(login_url='patientlogin')
 def patient_dashboard_view(request):
