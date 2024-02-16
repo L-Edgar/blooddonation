@@ -19,17 +19,17 @@ def loginView(request):
     messages.success(request,'')
     print(f"Request method: {request.method}")
     if request.method=='POST':
-        loginform=forms.PatientUserForm(request.POST)
+        login_form=forms.PatientUserForm(request.POST)
 
-        if loginform.is_valid():
-            username=loginform.cleaned_data['username']
-            password=loginform.cleaned_data['password']
+        if login_form.is_valid():
+            username=login_form.cleaned_data['username']
+            password=login_form.cleaned_data['password']
             existing_user=User.objects.filter(username=username).first()
             if existing_user:
                 user = authenticate(request, username=username, password=password)
                 if user:
                     login(request,user)
-                    return redirect('patient_dashboard_view')
+                    return redirect('/patient/patient_dashboard_view')
                 else:
                     messages.info(request,'Invalid Credentials')
                     return redirect('loginView')
@@ -37,13 +37,13 @@ def loginView(request):
                 messages.info(request, 'User does not exist')
                 return redirect('loginView')
         else:
-            print(f"Form errors: {loginform.errors}")
+            print(f"Form errors: {login_form.errors}")
             
     else:
-        loginform = forms.PatientUserForm()  # An unbound form
+        login_form = forms.PatientUserForm()  # An unbound form
         print("unsuccessful")
         
-    return render(request,'patient/patientlogin.html',{'loginform':loginform})
+    return render(request,'patient/patientlogin.html',{'login_form':login_form})
 
 
 
