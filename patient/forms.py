@@ -37,7 +37,7 @@ class PatientForm(forms.ModelForm):
 
 class CustomUserCreationForm(UserCreationForm):
     class Meta:
-        model = User
+        model = models.CustomUser
         fields = ['first_name', 'last_name', 'username', 'password1', 'password2']
         
 

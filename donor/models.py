@@ -1,10 +1,12 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.conf import settings
+
 
 class Donor(models.Model):
-    user=models.OneToOneField(User,on_delete=models.CASCADE)
+    user=models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     profile_pic= models.ImageField(upload_to='profile_pic/Donor/',null=True,blank=True)
-
+    
     
     bloodgroup=models.CharField(max_length=10)
     

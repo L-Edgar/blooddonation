@@ -1,13 +1,38 @@
 from django.db import models
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, AbstractUser
+from django.conf import settings
+
+
+class CustomUser(AbstractUser):
+    ROLE_CHOICES = [
+        ('patient', 'Patient'),
+        ('donor', 'Donor'),
+        ('admin','Blood')
+    ]
+
+    role = models.CharField(max_length=10, choices=ROLE_CHOICES, default='patient')
+    groups = models.ManyToManyField(
+        'auth.Group',
+        related_name='customuser_set',
+        related_query_name='customuser',
+        blank=True,
+        verbose_name='groups',
+    )
+    user_permissions = models.ManyToManyField(
+        'auth.Permission',
+        related_name='customuser_set',
+        related_query_name='customuser',
+        blank=True,
+        verbose_name='user permissions',
+    )
 
 class Patient(models.Model):
     
     
 
-    user=models.OneToOneField(User,on_delete=models.CASCADE)
+    user=models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     profile_pic= models.ImageField(upload_to='profile_pic/Patient/',null=True,blank=True)
-
+    
     age=models.PositiveIntegerField()
     bloodgroup=models.CharField(max_length=10)
     disease=models.CharField(max_length=100)

@@ -26,7 +26,7 @@ def donorlogin(request):
         username=request.POST['username']
         password=request.POST['password']
         user=authenticate(request,username=username,password=password)
-        if user is not None:
+        if user is not None and user.role=='donor':
             login(request,user)
             return redirect('donor:donor-dashboard')
         else:
@@ -63,7 +63,7 @@ def donor_signup_view(request):
             password1=userForm.cleaned_data['password1']
             password2=userForm.cleaned_data['password2']
             username=userForm.cleaned_data['username']
-            
+            print(userForm.cleaned_data)
             if password1==password2:
                  if forms.CustomUserCreationForm.Meta.model.objects.filter(username=username).exists():
                     messages.error(request, 'Passwords do not match.')
@@ -71,13 +71,19 @@ def donor_signup_view(request):
                     return render(request, 'patient/patientsignup.html', {'userForm': userForm})
                     
                  else:
-                    userForm.save()
+                    user = userForm.save(commit=False)
+                    user.role = 'donor'
+                    user.set_password(password1)
+                    user.save()
+                    
                     return redirect('donor:donorlogin')
             else:
-                print(userForm.errors)
+                print('errors')
         else:
             userForm=forms.CustomUserCreationForm()
-            print('Error 3')
+            for field, errors in userForm.errors.items():
+                print(f'Field: {field}, Errors: {errors}')
+            print(f'Error 3: {userForm.errors}')
     else:
         print(userForm.errors)
         

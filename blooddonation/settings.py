@@ -59,6 +59,7 @@ ROOT_URLCONF = 'blooddonation.urls'
 
 AUTHENTICATION_BACKENDS = [
     #'path.to.your.CustomBackend',
+    
     'django.contrib.auth.backends.ModelBackend',
 ]
 
@@ -163,4 +164,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
 
 #AUTH_USER_MODEL = 'patient.PatientCustomUser'
+
+AUTH_USER_MODEL = 'patient.CustomUser'
 

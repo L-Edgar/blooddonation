@@ -55,6 +55,9 @@
 
                         <div>
                             <button class="btn btn--radius-2 btn-danger" type="submit">Login</button>
+                            {% for message in messages %}
+                            <h3 style="margin-left: 20%;">{{message}}</h3>
+                            {% endfor %}
                         </div>
                     </form>
                     <br>

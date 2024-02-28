@@ -24,14 +24,14 @@ def loginView(request):
         username=request.POST['username']
         password=request.POST['password']
         
-        user = authenticate(request, username=username, password=password)
+        user = authenticate(request, username=username, password=password,role='patient',model=models.CustomUser)
         #if login_form.is_valid():
             #username=login_form.cleaned_data['username']
             #password=login_form.cleaned_data['password']
             
             
             
-        if user is not None:
+        if user is not None and user.role == 'patient':
             login(request,user)
             return redirect('patient:patient-dashboard')
         else:
@@ -79,6 +79,8 @@ def patient_signup_view(request):
                     return render(request, 'patient/patientsignup.html', {'userForm': userForm})
                     
                  else:
+                    user = userForm.save(commit=False)
+                    user.role = 'patient'
                     userForm.save()
                     #user.set_password(user.password)
                     print("successfull")

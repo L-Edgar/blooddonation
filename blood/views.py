@@ -13,6 +13,8 @@ from patient import models as pmodels
 from donor import forms as dforms
 from patient import forms as pforms
 from django.contrib import auth
+from django.contrib.auth import login, authenticate
+from django.contrib import messages
 
 def home_view(request):
     x=models.Stock.objects.all()
@@ -53,6 +55,30 @@ def home_view(request):
     if request.user.is_authenticated:
         return HttpResponseRedirect('afterlogin')  
     return render(request,'blood/index.html')
+
+def admin_login(request):
+    if request.method=='POST':
+        
+        form=forms.AdminUserForm(request.POST)
+       # if loginform.is_valid():
+            
+        username=request.POST['username']
+        password=request.POST['password']
+        user=authenticate(request,username=username,password=password)
+        if user is not None and user.role=='admin':
+            login(request,user)
+            return redirect('admin-dashboard')
+        else:
+            messages.info(request,'Invalid Credentials')
+            return redirect("adminlogin")
+        #else:
+           # print(f"Form errors: {loginform.errors}")
+            
+    else:
+        form = forms.AdminUserForm()  # An unbound form
+        print("unsuccessful")
+        
+    return render(request,'blood/adminlogin.html',{'form':form})
 
 def is_donor(user):
     return user.groups.filter(name='DONOR').exists()

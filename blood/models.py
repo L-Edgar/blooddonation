@@ -1,6 +1,7 @@
 from django.db import models
 from patient import models as pmodels
 from donor import models as dmodels
+from django.conf import settings
 class Stock(models.Model):
     bloodgroup=models.CharField(max_length=10)
     unit=models.PositiveIntegerField(default=0)
@@ -19,5 +20,9 @@ class BloodRequest(models.Model):
     date=models.DateField(auto_now=True)
     def __str__(self):
         return self.bloodgroup
+    
+
+class Admin(models.Model):
+    user=models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
 
         
