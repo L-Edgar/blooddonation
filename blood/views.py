@@ -12,6 +12,7 @@ from donor import models as dmodels
 from patient import models as pmodels
 from donor import forms as dforms
 from patient import forms as pforms
+from django.contrib import auth
 
 def home_view(request):
     x=models.Stock.objects.all()
@@ -68,6 +69,10 @@ def afterlogin_view(request):
         return redirect('patient/patient-dashboard')
     else:
         return redirect('admin-dashboard')
+    
+def logout(request):
+    auth.logout(request)
+    return redirect("/")
 
 @login_required(login_url='adminlogin')
 def admin_dashboard_view(request):

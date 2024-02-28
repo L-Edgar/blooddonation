@@ -57,6 +57,12 @@ MIDDLEWARE = [
 CSRF_COOKIE_SECURE=False
 ROOT_URLCONF = 'blooddonation.urls'
 
+AUTHENTICATION_BACKENDS = [
+    #'path.to.your.CustomBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -148,3 +154,13 @@ EMAIL_HOST_PASSWORD = 'xyz' # host email password required
 EMAIL_RECEIVING_USER = ['to@gmail.com'] # email on which you will receive messages sent from website
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# settings.py
+
+# settings.py
+
+#AUTH_USER_MODEL = 'donor.DonorCustomUser'
+# settings.py
+
+#AUTH_USER_MODEL = 'patient.PatientCustomUser'
+

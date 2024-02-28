@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect,reverse
+from django.shortcuts import render,redirect,reverse,get_object_or_404
 from . import forms,models
 from django.db.models import Sum,Q
 from django.contrib.auth.models import Group
@@ -12,32 +12,34 @@ from blood import forms as bforms
 from django.contrib.auth import login, authenticate
 from blood import models as bmodels
 from django.contrib import messages
-from django.contrib import auth
+#from django.contrib import auth
 from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth import logout as auth_logout
 
 def loginView(request):
     messages.success(request,'')
     print(f"Request method: {request.method}")
     if request.method=='POST':
         login_form=forms.PatientUserForm(request.POST)
-
-        if login_form.is_valid():
-            username=login_form.cleaned_data['username']
-            password=login_form.cleaned_data['password']
-            existing_user=User.objects.filter(username=username).first()
-            if existing_user:
-                user = authenticate(request, username=username, password=password)
-                if user:
-                    login(request,user)
-                    return redirect('/patient/patient_dashboard_view')
-                else:
-                    messages.info(request,'Invalid Credentials')
-                    return redirect('loginView')
-            else:
-                messages.info(request, 'User does not exist')
-                return redirect('loginView')
+        username=request.POST['username']
+        password=request.POST['password']
+        
+        user = authenticate(request, username=username, password=password)
+        #if login_form.is_valid():
+            #username=login_form.cleaned_data['username']
+            #password=login_form.cleaned_data['password']
+            
+            
+            
+        if user is not None:
+            login(request,user)
+            return redirect('patient:patient-dashboard')
         else:
-            print(f"Form errors: {login_form.errors}")
+            messages.info(request,'Invalid Credentials')
+            return redirect('patient:patientlogin')
+            
+        #else:
+            #print(f"Form errors: {login_form.errors}")
             
     else:
         login_form = forms.PatientUserForm()  # An unbound form
@@ -47,9 +49,9 @@ def loginView(request):
 
 
 
-def logout(request):
-    auth.logout(request)
-    return redirect("blood/logout.html")
+def logout_view(request):
+    auth_logout(request)
+    return render(request,"blood/logout.html")
 
 def patient_signup_view(request):
     #userForm=forms.PatientUserForm()
@@ -68,17 +70,18 @@ def patient_signup_view(request):
             password1=userForm.cleaned_data['password1']
             password2=userForm.cleaned_data['password2']
             username=userForm.cleaned_data['username']
+            print("Form is valid")
             
             if password1==password2:
                  if forms.CustomUserCreationForm.Meta.model.objects.filter(username=username).exists():
-                    messages.error(request, 'Passwords do not match.')
-                    
+                    messages.error(request, 'Username already exists.')
+                    print("Username already exists")
                     return render(request, 'patient/patientsignup.html', {'userForm': userForm})
                     
                  else:
                     userForm.save()
                     #user.set_password(user.password)
-                    
+                    print("successfull")
                     
                 #patient=patientForm.save(commit=False)
                 #patient.user=user
@@ -86,7 +89,9 @@ def patient_signup_view(request):
                 #patient.save()
                 #my_patient_group = Group.objects.get_or_create(name='PATIENT')
                 #my_patient_group[0].user_set.add(user)
-                    return redirect('/patient/patientlogin')
+                    return redirect('patient:patientlogin')
+            
+
         else:
             print(userForm.errors)
     else:
@@ -94,9 +99,12 @@ def patient_signup_view(request):
         print('Error 3')
     return render(request,'patient/patientsignup.html',{'userForm': userForm})
 
+def complete_registration(request):
+    return render(request,"patient/patient_registration.html")
+
 @login_required(login_url='patientlogin')
 def patient_dashboard_view(request):
-    patient= models.Patient.objects.get(user_id=request.user.id)
+    patient=models.Patient.objects.filter(user_id=request.user.id).first()
     dict={
         'requestpending': bmodels.BloodRequest.objects.all().filter(request_by_patient=patient).filter(status='Pending').count(),
         'requestapproved': bmodels.BloodRequest.objects.all().filter(request_by_patient=patient).filter(status='Approved').count(),
@@ -115,7 +123,7 @@ def make_request_view(request):
         if request_form.is_valid():
             blood_request=request_form.save(commit=False)
             blood_request.bloodgroup=request_form.cleaned_data['bloodgroup']
-            patient= models.Patient.objects.get(user_id=request.user.id)
+            patient= models.Patient.objects.filter(user_id=request.user.id).first()
             blood_request.request_by_patient=patient
             blood_request.save()
             return HttpResponseRedirect('my-request')  
@@ -123,7 +131,7 @@ def make_request_view(request):
 
 @login_required(login_url='patientlogin')
 def my_request_view(request):
-    patient= models.Patient.objects.get(user_id=request.user.id)
+    patient= models.Patient.objects.filter(user_id=request.user.id).first()
     blood_request=bmodels.BloodRequest.objects.all().filter(request_by_patient=patient)
     return render(request,'patient/my_request.html',{'blood_request':blood_request})
 
