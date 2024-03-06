@@ -25,7 +25,7 @@ urlpatterns = [
     path('patient/',include('patient.urls',namespace='patient')),
 
     
-    path('',views.home_view,name=''),
+    path('',views.home,name=''),
     #path('logout', LogoutView.as_view(template_name='blood/logout.html'),name='logout'),
     path('logout', views.logout,name='logout'),
     path('adminlogin',views.admin_login,name='adminlogin'),

@@ -90,10 +90,30 @@ def donor_signup_view(request):
         
     return render(request,'donor/donorsignup.html',context=mydict)
 
+
+@login_required(login_url='donorlogin')
 def complete_registration(request):
-    user_form=forms.DonorForm()
+    donor = models.Donor.objects.filter(user_id=request.user.id).first()
+    print("First User:", request.user)
+
     if request.method=='POST':
-        user_form=forms.DonorForm(request.POST)
+        user_form=forms.DonorForm(request.POST,instance=donor)
+        if user_form.is_valid():
+            print("Third User:", request.user)
+            user_form.instance.user = request.user
+            user_form.save()
+            print("Successful")
+            redirect_url = request.GET.get('next', 'donor:donor-dashboard')
+            return redirect(redirect_url)
+            
+
+        else:
+            print("Error: ", user_form.errors)
+            print("Second User:", request.user)
+
+    else:
+        user_form = forms.DonorForm(instance=donor)
+        
     return render(request,"donor/donor_registration.html",{"user_form":user_form})
 
 @login_required(login_url='donorlogin')
@@ -110,6 +130,7 @@ def donor_dashboard_view(request):
 
 @login_required(login_url='donorlogin')
 def donate_blood_view(request):
+    print("User ID:", request.user.id)
     donation_form=forms.DonationForm()
     if request.method=='POST':
         donation_form=forms.DonationForm(request.POST)
@@ -159,4 +180,6 @@ def request_history_view(request):
 
 @login_required(login_url='donorlogin')
 def donor_profile(request):
-    return render(request,'donor/donor_profile.html')
+    donor= models.Donor.objects.filter(user_id=request.user.id).first()
+    
+    return render(request,'donor/donor_profile.html',{'donor':donor})

@@ -9,18 +9,13 @@
     <div class="abc">
 
         <!-- ===== ===== Header/Navbar ===== ===== -->
-        <header>
-            <div class="brandLogo">
-                <figure><img src="web_logo.jpg" alt="logo" width="40px" height="40px"></figure>
-                <span>MarqueTech</span>
-            </div>
-        </header>
+        
 
-
+        
         <!-- ===== ===== User Main-Profile ===== ===== -->
         <section class="userProfile card">
             <div class="profile">
-                <figure><img src="profile.png" alt="profile" width="250px" height="250px"></figure>
+                <figure><img src="{{donor.profile_pic}}" alt="profile" width="250px" height="250px"></figure>
             </div>
         </section>
 
@@ -60,10 +55,10 @@
         <!-- ===== ===== User Details Sections ===== ===== -->
         <section class="userDetails card">
             <div class="userName">
-                <h1 class="name">Jeremy Rose</h1>
+                <h1 class="name">{{donor.user.first_name}} {{donor.user.last_name}}</h1>
                 <div class="map">
                     <i class="ri-map-pin-fill ri"></i>
-                    <span>New York, NY</span>
+                    <span>{{donor.address}}</span>
                 </div>
                 <p>Product Designer</p>
             </div>
@@ -121,7 +116,7 @@
                 <ul>
                     <li class="phone">
                         <h1 class="label">Phone:</h1>
-                        <span class="info">+11 234 567 890</span>
+                        <span class="info">{{donor.mobile}}</span>
                     </li>
 
                     <li class="address">
@@ -155,6 +150,7 @@
                     </li>
                 </ul>
             </div>
+            
             <a href="#"><button class="btn btn--radius-2 btn-danger" style="padding: 10px; font-weight:bold">Edit Info</button></a>
         </section>
     </div>

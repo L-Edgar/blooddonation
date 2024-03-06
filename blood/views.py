@@ -15,7 +15,9 @@ from patient import forms as pforms
 from django.contrib import auth
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
+@login_required(login_url='adminlogin')
 def home_view(request):
     x=models.Stock.objects.all()
     print(x)
@@ -56,6 +58,9 @@ def home_view(request):
         return HttpResponseRedirect('afterlogin')  
     return render(request,'blood/index.html')
 
+def home(request):
+    return render(request,'blood/index.html')
+
 def admin_login(request):
     if request.method=='POST':
         
@@ -65,7 +70,7 @@ def admin_login(request):
         username=request.POST['username']
         password=request.POST['password']
         user=authenticate(request,username=username,password=password)
-        if user is not None and user.role=='admin':
+        if user is not None:
             login(request,user)
             return redirect('admin-dashboard')
         else:
@@ -80,13 +85,16 @@ def admin_login(request):
         
     return render(request,'blood/adminlogin.html',{'form':form})
 
+@login_required(login_url='adminlogin')
 def is_donor(user):
     return user.groups.filter(name='DONOR').exists()
 
+@login_required(login_url='adminlogin')
 def is_patient(user):
     return user.groups.filter(name='PATIENT').exists()
 
 
+@login_required(login_url='adminlogin')
 def afterlogin_view(request):
     if is_donor(request.user):      
         return redirect('donor/donor-dashboard')

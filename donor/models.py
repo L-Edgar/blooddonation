@@ -4,7 +4,8 @@ from django.conf import settings
 
 
 class Donor(models.Model):
-    user=models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
+    user = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
+
     profile_pic= models.ImageField(upload_to='profile_pic/Donor/',null=True,blank=True)
     
     
