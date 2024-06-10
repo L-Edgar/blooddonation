@@ -1,4 +1,6 @@
-{% extends 'donor/donorbase.html' %} {% block content %} {% load widget_tweaks%}
+{% extends 'patient/patientbase.html' %} 
+{% block content %} 
+{% load widget_tweaks%} 
 {%load static%}
 <head>
   <!-- Font special for pages-->
@@ -18,12 +20,7 @@
         <h2 class="title">COMPLETE REGISTRATION</h2>
       </div>
       <div class="card-body">
-        <form
-          method="POST"
-          autocomplete="off"
-          enctype="multipart/form-data"
-          action="{% url 'donor:complete-reg' %}"
-        >
+        <form method="POST" autocomplete="off" enctype="multipart/form-data" action="{% url 'patient:complete-reg' %}">
           {% csrf_token %}
 
           <div class="form-row">
@@ -51,27 +48,45 @@
           </div>
 
           <div class="form-row">
-            <div class="name">Address</div>
+            <div class="name">Disease</div>
             <div class="value">
               <div class="input-group">
-                {% render_field user_form.address class="input--style-5" disabled="disabled"%}
+                {% render_field user_form.disease class="input--style-5"%}
               </div>
             </div>
           </div>
           <div class="form-row">
-            <div class="name">Date of Birth</div>
+            <div class="name">Address</div>
             <div class="value">
               <div class="input-group">
-                {% render_field user_form.date_of_birth class="input--style-5"%}
+                {% render_field user_form.address class="input--style-5"%}
               </div>
             </div>
           </div>
+
+          
 
           <div class="form-row">
             <div class="name">Contact</div>
             <div class="value">
               <div class="input-group">
                 {% render_field user_form.mobile class="input--style-5"%}
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Age</div>
+            <div class="value">
+              <div class="input-group">
+                {% render_field user_form.age class="input--style-5"%}
+              </div>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="name">Doctor's Name</div>
+            <div class="value">
+              <div class="input-group">
+                {% render_field user_form.doctorname class="input--style-5"%}
               </div>
             </div>
           </div>
@@ -85,6 +100,10 @@
             </div>
           </div>
 
+          
+
+          
+
           <div>
             <button class="btn btn--radius-2 btn-danger" type="submit">
               UPDATE
@@ -92,7 +111,6 @@
           </div>
         </form>
         <br />
-        
       </div>
     </div>
   </div>

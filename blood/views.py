@@ -16,6 +16,7 @@ from django.contrib import auth
 from django.contrib.auth import login, authenticate
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
+from patient.models import CustomUser
 
 @login_required(login_url='adminlogin')
 def home_view(request):
@@ -106,7 +107,7 @@ def afterlogin_view(request):
     
 def logout(request):
     auth.logout(request)
-    return redirect("/")
+    return render(request,"blood/logout.html")
 
 @login_required(login_url='adminlogin')
 def admin_dashboard_view(request):
@@ -160,7 +161,7 @@ def admin_donor_view(request):
 @login_required(login_url='adminlogin')
 def update_donor_view(request,pk):
     donor=dmodels.Donor.objects.get(id=pk)
-    user=dmodels.User.objects.get(id=donor.user_id)
+    user=CustomUser.objects.get(id=donor.user_id)
     userForm=dforms.DonorUserForm(instance=user)
     donorForm=dforms.DonorForm(request.FILES,instance=donor)
     mydict={'userForm':userForm,'donorForm':donorForm}
@@ -182,7 +183,7 @@ def update_donor_view(request,pk):
 @login_required(login_url='adminlogin')
 def delete_donor_view(request,pk):
     donor=dmodels.Donor.objects.get(id=pk)
-    user=User.objects.get(id=donor.user_id)
+    user=CustomUser.objects.get(id=donor.user_id)
     user.delete()
     donor.delete()
     return HttpResponseRedirect('/admin-donor')
@@ -196,7 +197,7 @@ def admin_patient_view(request):
 @login_required(login_url='adminlogin')
 def update_patient_view(request,pk):
     patient=pmodels.Patient.objects.get(id=pk)
-    user=pmodels.User.objects.get(id=patient.user_id)
+    user=CustomUser.objects.get(id=patient.user_id)
     userForm=pforms.PatientUserForm(instance=user)
     patientForm=pforms.PatientForm(request.FILES,instance=patient)
     mydict={'userForm':userForm,'patientForm':patientForm}
@@ -285,3 +286,7 @@ def reject_donation_view(request,pk):
     donation.status='Rejected'
     donation.save()
     return HttpResponseRedirect('/admin-donation')
+
+
+def admin_profile(request):
+    return render(request,'blood/admin_profile.html')

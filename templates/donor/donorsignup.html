@@ -32,7 +32,7 @@
                     <h2 class="title">Donor Signup</h2>
                 </div>
                 <div class="card-body">
-                    <form method="POST" autocomplete="off" enctype="multipart/form-data">
+                    <form method="POST" autocomplete="off" enctype="multipart/form-data" action="{% url 'donor:donorsignup' %}">
                         {% csrf_token %}
 
                         <div class="form-row">
@@ -138,7 +138,11 @@
 
                         <div>
                             <button class="btn btn--radius-2 btn-danger" type="submit">Register</button>
+                            {% for message in messages %}
+                            <h4 style="margin-left: 20%; list-style:none">{{message}}</h4>
+                            {% endfor %}
                         </div>
+                        
                     </form>
                     <br>
                     <p style="text-align: center;">Already have an account ? <a style="text-decoration: none;" href="/donor/donorlogin">Click here to login</a></p>

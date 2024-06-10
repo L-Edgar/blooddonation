@@ -25,9 +25,13 @@
                         <div class="name">Blood Group</div>
                         <div class="value">
                             <div class="input-group">
+                                
                                 <div class="rs-select2 js-select-simple select--no-search">
                                     <select name="bloodgroup">
                                         <option disabled="disabled" selected="selected">Choose option</option>
+                                        {% if donor.bloodgroup%}
+                                        <option value="{{donor.bloodgroup}}" selected="selected">{{donor.bloodgroup}}</option>
+                                        {% else %}
                                         <option>O+</option>
                                         <option>O-</option>
                                         <option>A+</option>
@@ -36,9 +40,11 @@
                                         <option>B-</option>
                                         <option>AB+</option>
                                         <option>AB-</option>
+                                        {% endif %}
                                     </select>
                                     <div class="select-dropdown"></div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>

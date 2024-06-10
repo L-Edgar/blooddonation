@@ -14,6 +14,7 @@ urlpatterns = [
     path('make-request', views.make_request_view,name='make-request'),
     path('request-history', views.request_history_view,name='request-history'),
     path('donor-profile', views.donor_profile,name='donor-profile'),
-    path('complete-reg',views.complete_registration,name="complete-reg")
+    path('complete-reg',views.complete_registration,name="complete-reg"),
+    path('logout',views.logout_view,name="logout"),
 
 ]

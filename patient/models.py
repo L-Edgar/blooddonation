@@ -40,6 +40,7 @@ class Patient(models.Model):
 
     address = models.CharField(max_length=40)
     mobile = models.CharField(max_length=20,null=False)
+    disease=models.CharField(max_length=100,default="Nothing")
    
     @property
     def get_name(self):

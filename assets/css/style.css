@@ -77,6 +77,8 @@ html {
   min-height: 100vh;
 }
 
+
+
 /* ===== =====>>  Body Main-Background Css  <<===== =====  */
 .main_bg {
   position: absolute;
@@ -459,6 +461,8 @@ header {
 .timeline_about .contact_info ul .site span {
   color: var(--f5-color);
 }
+ 
+/*RESPONSIVENESS*/
 
 @media screen and (max-width: 1024px) {
   html {
@@ -478,7 +482,7 @@ header {
   }
 
   /* ===== =====>>  Container Css Start  <<===== ===== */
-  .container {
+  .abc {
     grid-template-columns: 1fr;
     grid-template-areas:
       "header"
@@ -492,10 +496,11 @@ header {
     width: 90%;
     height: 100%;
     box-shadow: none;
+    margin-left: -30%;
   }
 
   /* ===== =====>>  Container Card Css Start  <<===== ===== */
-  .container .card {
+  .abc .card {
     backdrop-filter: none;
   }
 
@@ -503,21 +508,22 @@ header {
     margin-bottom: 3rem;
   }
 
-  .container::before,
-  .container::after {
+  .abc::before,
+  .abc::after {
     display: none;
   }
 
   /* ===== =====>>  Header/Navbar Css Start  <<===== ===== */
-  .container header {
+  .abc header {
     padding: 2.5rem;
   } 
 }
 
 @media screen and (max-width: 500px) {
-  .container {
+  .abc {
     width: 100%;
     overflow: initial;
+    
   }
 }
 

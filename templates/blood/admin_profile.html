@@ -1,5 +1,5 @@
 
-{% extends 'donor/donorbase.html' %}
+{% extends 'blood/adminbase.html' %}
 {% load static %}
 
 {% block content %}
@@ -20,7 +20,7 @@
             <div class="profile">
                 <figure>
                     {% if donor.profile_pic %}
-                    <img src="{{donor.profile_pic.url}}" alt="profile" width="250px" height="250px">
+                    <img src="{{}}" alt="profile" width="250px" height="250px">
                     {% else %}
                     <img src="{% static 'profile_pic/download.png' %}" alt="profile" width="250px" height="250px">
                     {%endif%}
@@ -64,15 +64,15 @@
         <!-- ===== ===== User Details Sections ===== ===== -->
         <section class="userDetails card">
             <div class="userName">
-                <h1 class="name">{{donor.user.first_name}} {{donor.user.last_name}}</h1>
+                <h1 class="name">{{blood.user.username}}</h1>
                 <div class="map">
                     <i class="ri-map-pin-fill ri"></i>
-                    <span>{{donor.user.username}}</span>
+                    <span>{{blood.user.username}}</span>
                 </div>
                 <p>Donor</p>
             </div>
 
-            <div class="rank">
+           <!---- <div class="rank">
                 <h1 class="heading">Blood Group</h1>
                 <span>{{donor.bloodgroup}}</span>
                 <div class="rating">
@@ -83,7 +83,7 @@
                     <i class="ri-star-fill rate underrate"></i>
                 </div>
             </div>
-
+        -->
             <div class="btns">
                 <ul>
                     

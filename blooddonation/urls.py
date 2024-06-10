@@ -17,6 +17,8 @@ from django.contrib import admin
 from django.urls import path,include
 from django.contrib.auth.views import LogoutView,LoginView
 from blood import views
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
 
@@ -32,6 +34,7 @@ urlpatterns = [
     path('afterlogin', views.afterlogin_view,name='afterlogin'),
     #path('adminlogin', LoginView.as_view(template_name='blood/adminlogin.html'),name='adminlogin'),
     path('admin-dashboard', views.admin_dashboard_view,name='admin-dashboard'),
+    path('admin-profile', views.admin_profile,name='admin-profile'),
     path('admin-blood', views.admin_blood_view,name='admin-blood'),
     path('admin-donor', views.admin_donor_view,name='admin-donor'),
     path('admin-patient', views.admin_patient_view,name='admin-patient'),
@@ -46,5 +49,8 @@ urlpatterns = [
     path('admin-request-history', views.admin_request_history_view,name='admin-request-history'),
     path('update-approve-status/<int:pk>', views.update_approve_status_view,name='update-approve-status'),
     path('update-reject-status/<int:pk>', views.update_reject_status_view,name='update-reject-status'),
+    
    
 ]
+
+urlpatterns=urlpatterns+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

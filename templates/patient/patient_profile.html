@@ -1,5 +1,5 @@
 {% extends 'patient/patientbase.html' %}
-
+{% load static %}
 
 {% block content %}
 
@@ -15,19 +15,19 @@
  <!-- ===== ===== Main-Container ===== ===== -->
  <div class="abc">
 
-     <!-- ===== ===== Header/Navbar ===== ===== -->
-     <header>
-         <div class="brandLogo">
-             <figure><img src="web_logo.jpg" alt="logo" width="40px" height="40px"></figure>
-             <span>MarqueTech</span>
-         </div>
-     </header>
+    
 
 
      <!-- ===== ===== User Main-Profile ===== ===== -->
      <section class="userProfile card">
          <div class="profile">
-             <figure><img src="profile.png" alt="profile" width="250px" height="250px"></figure>
+             <figure>
+                {% if  patient.profile_pic %} 
+                <img src="{{patient.profile_pic.url}}" alt="profile" width="250px" height="250px">
+                {% else %}
+                <img src="{% static 'profile_pic/download.png' %}" alt="profile" width="250px" height="250px">
+                {% endif %}
+            </figure>
          </div>
      </section>
 
@@ -37,7 +37,7 @@
 
          <!-- ===== ===== Work Contaienr ===== ===== -->
          <div class="work">
-             <h1 class="heading">work</h1>
+             <h1 class="heading">Health Status</h1>
              <div class="primary">
                  <h1>Spotify New York</h1>
                  <span>Primary</span>
@@ -67,17 +67,17 @@
      <!-- ===== ===== User Details Sections ===== ===== -->
      <section class="userDetails card">
          <div class="userName">
-             <h1 class="name">Jeremy Rose</h1>
+             <h1 class="name">{{patient.user.first_name}} {{patient.user.last_name}}</h1>
              <div class="map">
                  <i class="ri-map-pin-fill ri"></i>
-                 <span>New York, NY</span>
+                 <span>{{patient.user.username}}</span>
              </div>
-             <p>Product Designer</p>
+             <p>Patient</p>
          </div>
 
          <div class="rank">
-             <h1 class="heading">Rankings</h1>
-             <span>8,6</span>
+             <h1 class="heading">Blood Group</h1>
+             <span>{{patient.bloodgroup}}</span>
              <div class="rating">
                  <i class="ri-star-fill rate"></i>
                  <i class="ri-star-fill rate"></i>
@@ -89,19 +89,14 @@
 
          <div class="btns">
              <ul>
-                 <li class="sendMsg">
-                     <i class="ri-chat-4-fill ri"></i>
-                     <a href="#">Send Message</a>
-                 </li>
+                 
 
                  <li class="sendMsg active">
                      <i class="ri-check-fill ri"></i>
-                     <a href="#">Contacts</a>
+                     <a href="#">Edit Info</a>
                  </li>
 
-                 <li class="sendMsg">
-                     <a href="#">Report User</a>
-                 </li>
+                 
              </ul>
          </div>
      </section>
@@ -111,10 +106,7 @@
      <section class="timeline_about card">
          <div class="tabs">
              <ul>
-                 <li class="timeline">
-                     <i class="ri-eye-fill ri"></i>
-                     <span>Timeline</span>
-                 </li>
+                 
 
                  <li class="about active">
                      <i class="ri-user-3-fill ri"></i>
@@ -128,23 +120,25 @@
              <ul>
                  <li class="phone">
                      <h1 class="label">Phone:</h1>
-                     <span class="info">+11 234 567 890</span>
+                     <span class="info">{{patient.mobile}}</span>
                  </li>
 
                  <li class="address">
                      <h1 class="label">Address:</h1>
-                     <span class="info">S34 E 65th Street <br> New York, NY 10651-78 156-187-60</span>
+                     <span class="info">{{patient.address}}</span>
                  </li>
+
+                 <li class="site">
+                    <h1 class="label">Disease:</h1>
+                    <span class="info">{{patient.disease}}</span>
+                </li>
 
                  <li class="email">
                      <h1 class="label">E-mail:</h1>
                      <span class="info">hello@rsmarquetech.com</span>
                  </li>
 
-                 <li class="site">
-                     <h1 class="label">Site:</h1>
-                     <span class="info">www.rsmarquetech.com</span>
-                 </li>
+                 
              </ul>
          </div>
 
@@ -162,7 +156,7 @@
                  </li>
              </ul>
          </div>
-         <a href="#"><button class="btn btn--radius-2 btn-danger" style="padding: 10px;">Edit Info</button></a>
+         
      </section>
     
  </div>
