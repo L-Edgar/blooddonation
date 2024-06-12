@@ -1,9 +1,394 @@
-<mxfile host="app.diagrams.net" modified="2024-06-12T11:04:30.501Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" version="24.5.2" etag="EWGsfhiVJ8y7E72jRQnr" type="github">
+<mxfile host="app.diagrams.net" modified="2024-06-12T13:04:39.911Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="GOOlwWNozXfkxjZjbkiO" version="24.5.2" type="github">
   <diagram name="Page-1" id="7Al2jOYt5N-tBdOvpTQu">
-    <mxGraphModel>
+    <mxGraphModel dx="1750" dy="942" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-1" value="Admin" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="20" y="20" width="61" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-2" value="Blood Bank Management System" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="207" y="122" width="245" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-3" value="Donor" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="58" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-4" value="Patient" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="470" y="20" width="66" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-5" value="Database" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="289" y="224" width="81" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-6" value="Manage Admin, Donor, Patient, Blood Stock" style="curved=1;startArrow=none;endArrow=block;exitX=0.4951844762583248;exitY=1.0121212583599668;entryX=0.12474677285338782;entryY=-0.0060605713815400095;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-1" target="0MlRzv6bR06kwgjE7RUj-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="50" y="88" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-7" value="Donate Blood, Request Blood" style="curved=1;startArrow=none;endArrow=block;exitX=0.5008622531233162;exitY=1.0121212583599668;entryX=0.49816330890266264;entryY=-0.0060605713815400095;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-3" target="0MlRzv6bR06kwgjE7RUj-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-8" value="Request Blood" style="curved=1;startArrow=none;endArrow=block;exitX=0.5049244851777048;exitY=1.0121212583599668;entryX=0.731545506042394;entryY=-0.0060605713815400095;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-4" target="0MlRzv6bR06kwgjE7RUj-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="503" y="88" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-9" value="Store Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.49816330890266264;exitY=1.0060606869784268;entryX=0.49444457631052274;entryY=-0.0063491700187562;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-2" target="0MlRzv6bR06kwgjE7RUj-5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-10" value="Blood Bank Management System" style="whiteSpace=wrap;strokeWidth=2;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="20" y="412" width="1406" height="83" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-11" value="Manage Admin" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="191" y="437" width="118" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-12" value="Manage Donor" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="481" y="437" width="117" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-13" value="Manage Patient" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="985" y="437" width="126" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-14" value="Manage Blood Stock" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1179" y="437" width="158" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-15" value="Admin" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="767" y="310" width="61" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-16" value="Donor" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="31" y="310" width="58" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-17" value="Patient" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1373" y="310" width="66" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-18" value="Database" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="789" y="564" width="81" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-19" value="Create, Update, Delete Admin Accounts" style="curved=1;startArrow=none;endArrow=block;exitX=-0.00009577391577548669;exitY=0.6199694674573558;entryX=0.9623434090707902;entryY=-0.0060605713815400095;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-15" target="0MlRzv6bR06kwgjE7RUj-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="386" y="378" />
+              <mxPoint x="386" y="412" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-20" value="View, Update, Delete Donor Accounts" style="curved=1;startArrow=none;endArrow=block;exitX=-0.00009577391577548669;exitY=0.9153116369857659;entryX=0.9926151746825271;entryY=-0.0060605713815400095;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-15" target="0MlRzv6bR06kwgjE7RUj-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="683" y="378" />
+              <mxPoint x="683" y="412" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-21" value="View, Update, Delete Patient Accounts" style="curved=1;startArrow=none;endArrow=block;exitX=0.9956009348884958;exitY=0.7682857246286924;entryX=0.27129097064887664;entryY=-0.0060605713815400095;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-15" target="0MlRzv6bR06kwgjE7RUj-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="976" y="378" />
+              <mxPoint x="976" y="412" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-22" value="Update Blood Stock" style="curved=1;startArrow=none;endArrow=block;exitX=0.9956009348884958;exitY=0.620931451388575;entryX=0.36825961740141305;entryY=-0.0060605713815400095;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-15" target="0MlRzv6bR06kwgjE7RUj-14">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1205" y="378" />
+              <mxPoint x="1205" y="412" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-23" value="Create Account, Donate Blood, Request Blood" style="curved=1;startArrow=none;endArrow=block;exitX=0.49644391290072737;exitY=1.0121212583599668;entryX=0.002016670683510283;entryY=0.345732040155693;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-16" target="0MlRzv6bR06kwgjE7RUj-12">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="60" y="412" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-24" value="Create Account, Request Blood" style="curved=1;startArrow=none;endArrow=block;exitX=0.5030545321377841;exitY=1.0121212583599668;entryX=0.9988221365308004;entryY=0.2783725303204495;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-17" target="0MlRzv6bR06kwgjE7RUj-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1406" y="412" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-25" value="Store Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.5004766916824599;exitY=1.0060606869784268;entryX=0.0020642692660108024;entryY=0.4195750498011011;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-11" target="0MlRzv6bR06kwgjE7RUj-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="529" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-26" value="Store Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.5029181129912026;exitY=1.0060606869784268;entryX=0.0020642692660108024;entryY=0.3471427761520148;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-12" target="0MlRzv6bR06kwgjE7RUj-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="529" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-27" value="Store Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.5002606407044425;exitY=1.0060606869784268;entryX=0.9967016526210455;entryY=0.3000851768701012;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-13" target="0MlRzv6bR06kwgjE7RUj-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1048" y="529" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-28" value="Store Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.5037482297873195;exitY=1.0060606869784268;entryX=0.9967016526210455;entryY=0.3942304632144222;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-14" target="0MlRzv6bR06kwgjE7RUj-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1259" y="529" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-29" value="Donor" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="591" y="650" width="58" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-30" value="Patient" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1524" y="1505" width="66" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-31" value="Administrator" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="606" y="1259" width="115" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-32" value="Blood Bank" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1223" y="1035" width="95" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-33" value="1.0 Register and Authenticate" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="741" y="771" width="228" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-34" value="2.0 Donation Management" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="335" y="1035" width="202" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-35" value="3.0 Inventory Management" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1167" y="1137" width="206" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-36" value="4.0 Blood Request and Allocation" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1251" y="1382" width="251" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-37" value="5.0 Notifications and Communication" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="913" width="281" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-38" value="Donor Information" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="429" y="893" width="146" height="74" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-39" value="Patient Information" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1429" y="1238" width="155" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-40" value="Blood Inventory" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1206" y="1240" width="128" height="71" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-41" value="Blood Request Records" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1089" y="1484" width="177" height="77" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-42" value="Notification Logs" style="shape=cylinder3;boundedLbl=1;backgroundOutline=1;size=10;strokeWidth=2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="1358" y="752" width="136" height="72" as="geometry" />
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-43" value="Registers/Logs in" style="curved=1;startArrow=none;endArrow=block;exitX=0.9928745730169888;exitY=0.6400548313515367;entryX=0.6036384159649131;entryY=0.009814349087801847;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-29" target="0MlRzv6bR06kwgjE7RUj-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="953" y="718" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-44" value="Authentication Status" style="curved=1;startArrow=none;endArrow=block;exitX=0.4383846052918024;exitY=0.009814349087801847;entryX=0.9928745730169888;entryY=0.7620518450465527;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-33" target="0MlRzv6bR06kwgjE7RUj-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="794" y="718" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-45" value="Requests Blood" style="curved=1;startArrow=none;endArrow=block;exitX=0.05178597354258865;exitY=0.0144251621130741;entryX=0.5677551995607144;entryY=1.0035604997114702;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-30" target="0MlRzv6bR06kwgjE7RUj-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1428" y="1449" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-46" value="Manages System" style="curved=1;startArrow=none;endArrow=block;exitX=-0.0035053750743036685;exitY=0.23557977642588646;entryX=0.0018623586286578263;entryY=0.8930770112798565;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-31" target="0MlRzv6bR06kwgjE7RUj-33">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="210" y="1204" />
+              <mxPoint x="210" y="858" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-47" value="Updates Inventory" style="curved=1;startArrow=none;endArrow=block;exitX=0.7650890007958424;exitY=1.0061854160193242;entryX=0.6246769663864321;entryY=-0.011996413722182766;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-32" target="0MlRzv6bR06kwgjE7RUj-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1348" y="1102" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-48" value="Inventory Updates" style="curved=1;startArrow=none;endArrow=block;exitX=0.32248440831131564;exitY=-0.011996413722182766;entryX=0.10980829591716859;entryY=1.0061854160193242;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-35" target="0MlRzv6bR06kwgjE7RUj-32">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1158" y="1102" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-49" value="Stores/Updates" style="curved=1;startArrow=none;endArrow=block;exitX=0.13449622655597027;exitY=1.0219356074477688;entryX=0.499689663926216;entryY=-0.004760175137906461;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-33" target="0MlRzv6bR06kwgjE7RUj-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="502" y="858" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-50" value="Stores/Updates" style="curved=1;startArrow=none;endArrow=block;exitX=1.0025613851714552;exitY=0.8896618895232867;entryX=0.5020515688004032;entryY=0.0053882598876953125;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-33" target="0MlRzv6bR06kwgjE7RUj-39">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1507" y="858" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-51" value="Schedules Donation" style="curved=1;startArrow=none;endArrow=block;exitX=0.7820795105748547;exitY=1.0121212583599668;entryX=0.880494472002838;entryY=-0.0059358423406427555;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-29" target="0MlRzv6bR06kwgjE7RUj-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="671" y="718" />
+              <mxPoint x="671" y="1001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-52" value="Stores Donation Info" style="curved=1;startArrow=none;endArrow=block;exitX=0.49886402918560174;exitY=-0.0059358423406427555;entryX=0.26415452965224984;entryY=0.9919475349220069;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-34" target="0MlRzv6bR06kwgjE7RUj-38">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="436" y="1001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-53" value="Updates Inventory" style="curved=1;startArrow=none;endArrow=block;exitX=0.6246769663864321;exitY=1.0001248446377842;entryX=0.8040568688908927;entryY=0.0025225088629924077;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-35" target="0MlRzv6bR06kwgjE7RUj-40">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1348" y="1204" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-54" value="Inventory Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.0004182755947113037;exitY=0.06134866338155801;entryX=0.2684990243963984;entryY=1.0001248446377842;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-40" target="0MlRzv6bR06kwgjE7RUj-35">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1124" y="1204" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-55" value="Processes Request" style="curved=1;startArrow=none;endArrow=block;exitX=0.38671408284975756;exitY=1.0035604997114702;entryX=0.8353243541734877;entryY=-0.0062662842985871554;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-36" target="0MlRzv6bR06kwgjE7RUj-41">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1289" y="1449" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-56" value="Request Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.44016571791137665;exitY=-0.0062662842985871554;entryX=0.21440635013678128;entryY=1.0035604997114702;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-41" target="0MlRzv6bR06kwgjE7RUj-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1158" y="1449" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-57" value="Sends Notifications" style="curved=1;startArrow=none;endArrow=block;exitX=0.4609335281677047;exitY=-0.005274801543264678;entryX=0.9928745730169888;entryY=0.599964734120136;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-37" target="0MlRzv6bR06kwgjE7RUj-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1095" y="858" />
+              <mxPoint x="1095" y="718" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-58" value="Sends Notifications" style="curved=1;startArrow=none;endArrow=block;exitX=0.9191729875819421;exitY=1.0068464568167022;entryX=0.8003258829008825;entryY=0.0144251621130741;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-37" target="0MlRzv6bR06kwgjE7RUj-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1643" y="1001" />
+              <mxPoint x="1643" y="1449" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-59" value="Sends Notifications" style="curved=1;startArrow=none;endArrow=block;exitX=0.38516316078877144;exitY=1.0068464568167022;entryX=0.9954076684039572;entryY=0.14593942668717097;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-37" target="0MlRzv6bR06kwgjE7RUj-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1005" y="1001" />
+              <mxPoint x="1005" y="1204" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-60" value="Sends Notifications" style="curved=1;startArrow=none;endArrow=block;exitX=0.6070531454517369;exitY=1.0068464568167022;entryX=0.49597477160002057;entryY=-0.0059358423406427555;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-37" target="0MlRzv6bR06kwgjE7RUj-32">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1270" y="1001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-61" value="Donor Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.7352247982001822;exitY=0.9919475349220069;entryX=0.7141683140347456;entryY=-0.0059358423406427555;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-38" target="0MlRzv6bR06kwgjE7RUj-34">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="568" y="1001" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-62" value="Patient Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.5020515688004032;exitY=1.0042332712809245;entryX=0.6709504984975532;entryY=-0.008560758648496685;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-39" target="0MlRzv6bR06kwgjE7RUj-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1507" y="1348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-63" value="Inventory Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.5009187757968903;exitY=1.007641080399634;entryX=0.36154790088431016;entryY=-0.008560758648496685;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-40" target="0MlRzv6bR06kwgjE7RUj-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1270" y="1348" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-64" value="Request Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.0972635126677785;exitY=-0.0062662842985871554;entryX=0.06488487671866647;entryY=1.0035604997114702;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-41" target="0MlRzv6bR06kwgjE7RUj-36">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1043" y="1449" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-65" value="Notification Data" style="curved=1;startArrow=none;endArrow=block;exitX=0.49668561711030845;exitY=1.0034409364064534;entryX=0.7370142136351974;entryY=-0.005274801543264678;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-42" target="0MlRzv6bR06kwgjE7RUj-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1426" y="858" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-66" value="Donation Confirmation" style="curved=1;startArrow=none;endArrow=block;exitX=0.29660560897969696;exitY=-0.0059358423406427555;entryX=-0.005859276344036234;entryY=0.6508823938345432;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-34" target="0MlRzv6bR06kwgjE7RUj-29">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="311" y="1001" />
+              <mxPoint x="311" y="718" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-67" value="Inventory Reports" style="curved=1;startArrow=none;endArrow=block;exitX=0.001420419193008571;exitY=0.9491210924561115;entryX=0.9954076684039572;entryY=0.028559523345858328;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-35" target="0MlRzv6bR06kwgjE7RUj-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="922" y="1204" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-68" value="Allocation Status" style="curved=1;startArrow=none;endArrow=block;exitX=0.7438362928490357;exitY=1.0035604997114702;entryX=0.5196071383410265;entryY=0.0144251621130741;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-36" target="0MlRzv6bR06kwgjE7RUj-30">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1563" y="1449" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-69" value="Notification Logs" style="curved=1;startArrow=none;endArrow=block;exitX=0.2461147279946903;exitY=1.0068464568167022;entryX=0.8514236651662368;entryY=0.0048729289661754265;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-37" target="0MlRzv6bR06kwgjE7RUj-31">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="838" y="1001" />
+              <mxPoint x="838" y="1204" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0MlRzv6bR06kwgjE7RUj-70" value="Notification Details" style="curved=1;startArrow=none;endArrow=block;exitX=0.8516743264488862;exitY=1.0219356074477688;entryX=0.5413218855690234;entryY=-0.005274801543264678;rounded=0;" edge="1" parent="1" source="0MlRzv6bR06kwgjE7RUj-33" target="0MlRzv6bR06kwgjE7RUj-37">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1192" y="858" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
