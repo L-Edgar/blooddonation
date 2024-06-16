@@ -16,6 +16,8 @@ from django.contrib import messages
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import logout as auth_logout
 from django.http import Http404
+from functools import wraps
+from django.db import transaction
 
 def loginView(request):
     messages.success(request,'')
@@ -105,30 +107,76 @@ def patient_signup_view(request):
         print('Error 3')
     return render(request,'patient/patientsignup.html',{'userForm': userForm})
 
+def check_patient_registration(view_func):
+    @wraps(view_func)
+    def wrapper(request,*args,**kwargs):
+        patient=models.Patient.objects.filter(user_id=request.user.id).first()
+        if not patient:
+            return redirect('patient:complete-reg')
+        if not (patient.bloodgroup or patient.doctorname or patient.disease or patient.age):
+            return redirect('patient:complete-reg')
+        return view_func(request, *args, **kwargs)
+    return wrapper
+
+
+@login_required(login_url='patientlogin')
+@transaction.atomic
 def complete_registration(request):
-    patient=models.Patient.objects.filter(user_id=request.user.id).first()
+    
+    #patient=models.Patient.objects.filter(user_id=request.user.id).first()
+    
+    
     if request.method=='POST':
-        user_form=forms.PatientForm(request.POST,instance=patient)
-        if user_form.is_valid():
+        #user_form = forms.PatientUserForm(request.POST)
+        patient_form = forms.PatientForm(request.POST, request.FILES)
+    
+        if patient_form.is_valid():
+           # user_form=forms.PatientForm(request.POST,request.FILES,instance=patient)
+            user = request.user
             print("Third User:", request.user)
-            user_form.instance.user = request.user
-            user_form.save()
+            #user_form.instance.user = request.user
+            patient_data = patient_form.cleaned_data
+            patient=models.Patient.objects.create(
+                user=request.user,
+                bloodgroup=patient_data['bloodgroup'],
+                doctorname=patient_data['doctorname'],
+                disease=patient_data['disease'],
+                address=patient_data['address'],
+                mobile=patient_data['mobile'],
+                age=patient_data['age'],
+                profile_pic=patient_data['profile_pic'],
+            )
+            #user=user_form.save()
+            #patient=patient_form.save(commit=False)
+            #patient.user=user
+           # patient.save()
             print("Successful")
             redirect_url = request.GET.get('next', 'patient:patient-dashboard')
             return redirect(redirect_url)
             
 
         else:
+            
             print("Error: ", user_form.errors)
             print("Second User:", request.user)
 
     else:
-        user_form = forms.PatientForm(instance=patient)
-    return render(request,"patient/patient_registration.html",{'user_form':user_form})
+        user_form = forms.PatientUserForm(instance=request.user)
+        patient_form = forms.PatientForm()
+        #user_form = forms.PatientForm(instance=patient)
+    return render(request,"patient/patient_registration.html",{'patient_form':patient_form})
 
 @login_required(login_url='patientlogin')
 def patient_dashboard_view(request):
     patient=models.Patient.objects.filter(user_id=request.user.id).first()
+    if not patient:
+        default_counts = {
+            'requestpending': 0,
+            'requestapproved': 0,
+            'requestmade': 0,
+            'requestrejected': 0,
+        }
+        return render(request, 'patient/patient_dashboard.html', context=default_counts)
     dict={
         'requestpending': bmodels.BloodRequest.objects.all().filter(request_by_patient=patient).filter(status='Pending').count(),
         'requestapproved': bmodels.BloodRequest.objects.all().filter(request_by_patient=patient).filter(status='Approved').count(),
@@ -140,8 +188,10 @@ def patient_dashboard_view(request):
     return render(request,'patient/patient_dashboard.html',context=dict)
 
 @login_required(login_url='patientlogin')
+@check_patient_registration
 def make_request_view(request):
     request_form=bforms.RequestForm()
+    
     if request.method=='POST':
         request_form=bforms.RequestForm(request.POST)
         if request_form.is_valid():

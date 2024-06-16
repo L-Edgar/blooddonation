@@ -29,9 +29,7 @@ class DonorForm(forms.ModelForm):
             # Call the base class method
             super(DonorForm, self).__init__(*args, **kwargs)
             # Make the address field read-only
-            self.fields['address'].widget.attrs['readonly'] = True
-            self.fields['address'].widget.attrs['disabled'] = True 
-
+            
    # user = forms.ModelChoiceField(queryset=CustomUser.objects.all(), widget=forms.HiddenInput())
    # def __init__(self, *args, **kwargs):
     #    user = kwargs.pop('user', None)

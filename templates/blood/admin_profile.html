@@ -19,11 +19,8 @@
         <section class="userProfile card">
             <div class="profile">
                 <figure>
-                    {% if donor.profile_pic %}
-                    <img src="{{}}" alt="profile" width="250px" height="250px">
-                    {% else %}
+                    
                     <img src="{% static 'profile_pic/download.png' %}" alt="profile" width="250px" height="250px">
-                    {%endif%}
                 </figure>
             </div>
         </section>

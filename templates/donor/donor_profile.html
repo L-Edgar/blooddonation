@@ -20,9 +20,9 @@
             <div class="profile">
                 <figure>
                     {% if donor.profile_pic %}
-                    <img src="{{donor.profile_pic.url}}" alt="profile" width="250px" height="250px">
+                    <img src="{{donor.profile_pic.url}}" alt="profile" width="500px" height="1000px">
                     {% else %}
-                    <img src="{% static 'profile_pic/download.png' %}" alt="profile" width="250px" height="250px">
+                    <img src="{% static 'profile_pic/download.png' %}" alt="profile" width="500px" height="1000px">
                     {%endif%}
                 </figure>
             </div>
@@ -30,10 +30,10 @@
 
 
         <!-- ===== ===== Health Section ===== ===== -->
-        <section class="work_skills card">
+      <!----  <section class="work_skills card">
 
-            <!-- ===== ===== Health Contaienr ===== ===== -->
-            <div class="work">
+            ===== ===== Health Contaienr ===== =====
+           <div class="work">
                 <h1 class="heading">health status</h1>
                 <div class="primary">
                     <h1>Spotify New York</h1>
@@ -48,8 +48,8 @@
                 </div>
             </div>
 
-            <!-- ===== ===== Skills Contaienr ===== ===== -->
-            <div class="skills">
+            ===== ===== Skills Contaienr ===== ===== 
+           <div class="skills">
                 <h1 class="heading">Skills</h1>
                 <ul>
                     <li style="--i:0">Android</li>
@@ -58,7 +58,7 @@
                     <li style="--i:3">Video Editing</li>
                 </ul>
             </div>
-        </section>
+        </section>-->
 
 
         <!-- ===== ===== User Details Sections ===== ===== -->
@@ -138,13 +138,10 @@
                 <ul>
                     <li class="birthday">
                         <h1 class="label">Birthday:</h1>
-                        <span class="info">Dec 25, 2000</span>
+                        <span class="info">{{donor.date_of_birth}}</span>
                     </li>
 
-                    <li class="sex">
-                        <h1 class="label">Gender:</h1>
-                        <span class="info">Male</span>
-                    </li>
+                    
                 </ul>
             </div>
             

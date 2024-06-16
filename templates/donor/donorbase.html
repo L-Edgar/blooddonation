@@ -173,11 +173,12 @@ body{
         <button style="background-color: white;" type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse" >
           <span class="navbar-toggler-icon" ></span>
         </button>
-        
-      
+        <div style="display:flex;justify-content:center;align-items:center;margin-left:650px">
+        <p style="color: #fff;">Welcome </p>&nbsp;<h4 style="color: #fff;text-transform:uppercase">{{user.username}}</h4>
+        </div>
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item" style="display: flex;justify-content:center;align-items:center">
                     <a class="nav-link" style="color: white;" href="{% url 'donor:logout' %}">Logout &nbsp; <i class="fas fa-sign-out-alt"></i></a>
                 </li>
                 

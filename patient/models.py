@@ -1,10 +1,11 @@
 from django.db import models
-from django.contrib.auth.models import User, AbstractUser
+from django.contrib.auth.models import User, AbstractUser, BaseUserManager
 from django.conf import settings
 
 
 class CustomUser(AbstractUser):
     ROLE_CHOICES = [
+        
         ('patient', 'Patient'),
         ('donor', 'Donor'),
         ('admin','Blood')

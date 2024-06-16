@@ -9,7 +9,7 @@ from django.forms.widgets import TextInput
 class PatientUserForm(forms.ModelForm):
     password = forms.CharField(widget=PasswordInput)
     class Meta:
-        model=User
+        model=models.CustomUser
         fields=['first_name','last_name','username','password']
         widgets = {
         'password': forms.PasswordInput()
@@ -17,7 +17,19 @@ class PatientUserForm(forms.ModelForm):
 
     def __init__(self,*args,**kwargs):
         super().__init__(*args,**kwargs)
-        self.fields['password'].required=False
+        self.fields['password'].required=True
+
+    def save(self, commit=True):
+        user = super().save(commit=False)
+        user.set_password(self.cleaned_data["password"])
+        if commit:
+            user.save()
+            # Create related Patient instance
+            models.Patient.objects.create(
+                user=user,
+                # Add other fields as needed
+            )
+        return user
 
 class PatientForm(forms.ModelForm):
     
