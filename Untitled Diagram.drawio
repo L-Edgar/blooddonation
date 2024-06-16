@@ -1,0 +1,333 @@
+<mxfile host="app.diagrams.net" modified="2024-06-12T20:03:37.933Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36" etag="zCB1P_nzG6KII63m6cgV" version="24.5.2" type="github">
+  <diagram name="Page-1" id="2lDUK41i-PvjQR5xuwzg">
+    <mxGraphModel dx="1050" dy="1665" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="LBTRWxyhz_comnBckgnT-1" value="Donor" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.externalEntity;fontSize=13;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="90" y="80" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-5" value="3.0" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=13;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="650" y="80" width="130" height="110" as="geometry">
+            <mxRectangle x="340" y="50" width="60" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-6" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Notifications and&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;communications&lt;/font&gt;&lt;/div&gt;" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=13;verticalAlign=middle;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="LBTRWxyhz_comnBckgnT-5">
+          <mxGeometry y="30" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-7" value="2.0" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=13;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="370" y="80" width="130" height="110" as="geometry">
+            <mxRectangle x="340" y="50" width="60" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-8" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Add donation&amp;nbsp;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;request&lt;/font&gt;&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="LBTRWxyhz_comnBckgnT-7">
+          <mxGeometry y="30" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-9" value="1.0" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=13;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="80" y="-150" width="130" height="110" as="geometry">
+            <mxRectangle x="340" y="50" width="60" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-10" value="&lt;div&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Donor registration&lt;/font&gt;" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="LBTRWxyhz_comnBckgnT-9">
+          <mxGeometry y="30" width="130" height="80" as="geometry" />
+        </mxCell>
+        <object label="D1&amp;nbsp; &amp;nbsp; &amp;nbsp;Donor information" id="LBTRWxyhz_comnBckgnT-11">
+          <mxCell style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=13;verticalAlign=middle;" vertex="1" parent="1">
+            <mxGeometry x="360" y="-120" width="150" height="30" as="geometry" />
+          </mxCell>
+        </object>
+        <mxCell id="LBTRWxyhz_comnBckgnT-12" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=45;exitDy=0;exitPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="120" y="60" as="sourcePoint" />
+            <mxPoint x="140" y="-37" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.003;entryY=0.78;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="210" y="-100" as="sourcePoint" />
+            <mxPoint x="260" y="-150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-14" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-8">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="190" y="130" as="sourcePoint" />
+            <mxPoint x="360" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-16" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.552;exitY=1.18;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.554;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-11" target="LBTRWxyhz_comnBckgnT-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="410" y="10" as="sourcePoint" />
+            <mxPoint x="460" y="-40" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="140" as="sourcePoint" />
+            <mxPoint x="550" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-18" value="D2&amp;nbsp; &amp;nbsp; &amp;nbsp;Notification logs" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=13;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="650" y="-120" width="140" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.382;entryY=0.967;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="80" as="sourcePoint" />
+            <mxPoint x="750" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-20" value="Admin" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.externalEntity;fontSize=13;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="665" y="260" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-22" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.538;entryY=-0.038;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-6" target="LBTRWxyhz_comnBckgnT-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="250" as="sourcePoint" />
+            <mxPoint x="710" y="200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-23" value="4.0" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=13;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="410" y="260" width="130" height="110" as="geometry">
+            <mxRectangle x="340" y="50" width="60" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-24" value="&lt;div&gt;Inventory&amp;nbsp;&lt;/div&gt;&lt;div&gt;management&lt;/div&gt;" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="LBTRWxyhz_comnBckgnT-23">
+          <mxGeometry y="30" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-27" value="D3&amp;nbsp; &amp;nbsp; &amp;nbsp;Blood Inventory" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];" vertex="1" parent="1">
+          <mxGeometry x="170" y="280" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-28" value="" style="endArrow=classic;html=1;rounded=0;entryX=1.003;entryY=0.157;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="660" y="300" as="sourcePoint" />
+            <mxPoint x="560" y="299" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-29" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.437;entryY=1.047;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="400" y="340" as="sourcePoint" />
+            <mxPoint x="380" y="320" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="236" y="340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.448;exitY=-0.153;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.431;entryY=-0.042;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-27" target="LBTRWxyhz_comnBckgnT-23">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="270" y="250" as="sourcePoint" />
+            <mxPoint x="320" y="200" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="237" y="240" />
+              <mxPoint x="340" y="240" />
+              <mxPoint x="466" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-32" value="Patient" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.externalEntity;fontSize=13;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="220" y="405" width="100" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-40" value="5.0" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=13;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="205" y="590" width="130" height="110" as="geometry">
+            <mxRectangle x="340" y="50" width="60" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-41" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Patient&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;r&lt;span style=&quot;background-color: initial;&quot;&gt;egistration&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="LBTRWxyhz_comnBckgnT-40">
+          <mxGeometry y="30" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-42" value="6.0" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=13;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="460" y="400" width="130" height="110" as="geometry">
+            <mxRectangle x="340" y="50" width="60" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-43" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;Add blood&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 13px;&quot;&gt;&lt;font style=&quot;font-size: 13px;&quot;&gt;request&lt;/font&gt;&lt;/div&gt;" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="LBTRWxyhz_comnBckgnT-42">
+          <mxGeometry y="30" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-45" value="D4&amp;nbsp; &amp;nbsp; Patient information" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=13;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="460" y="630" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-46" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-43">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="320" y="455" as="sourcePoint" />
+            <mxPoint x="370" y="405" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-47" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=55;exitDy=100;exitPerimeter=0;entryX=0.562;entryY=-0.053;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-32" target="LBTRWxyhz_comnBckgnT-40">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="285" y="550" as="sourcePoint" />
+            <mxPoint x="335" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-48" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.029;entryY=0.74;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-45">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="335" y="650" as="sourcePoint" />
+            <mxPoint x="385" y="600" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-49" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-43">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="630" as="sourcePoint" />
+            <mxPoint x="570" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-50" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;strokeWidth=2;strokeColor=#f70808;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="460" as="sourcePoint" />
+            <mxPoint x="640" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="820" y="460" />
+              <mxPoint x="820" y="150" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-51" value="7.0" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=13;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="40" y="495" width="130" height="110" as="geometry">
+            <mxRectangle x="340" y="50" width="60" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-52" value="&lt;div&gt;Approve patient&amp;nbsp;&lt;/div&gt;&lt;div&gt;request&lt;/div&gt;" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="LBTRWxyhz_comnBckgnT-51">
+          <mxGeometry y="30" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-53" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0;exitDx=55;exitDy=100;exitPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-20">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="430" as="sourcePoint" />
+            <mxPoint x="100" y="490" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="390" />
+              <mxPoint x="390" y="390" />
+              <mxPoint x="100" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-54" value="D5&amp;nbsp; &amp;nbsp; Blood Request records" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=13;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="760" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-55" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.235;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-52" target="LBTRWxyhz_comnBckgnT-54">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="70" y="700" as="sourcePoint" />
+            <mxPoint x="120" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-57" value="8.0" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=13;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;arcSize=4;whiteSpace=wrap;html=1;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="10" y="220" width="130" height="110" as="geometry">
+            <mxRectangle x="340" y="50" width="60" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-58" value="&lt;div style=&quot;font-size: 13px;&quot;&gt;Approve donation&lt;/div&gt;" style="align=center;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=13;verticalAlign=middle;resizable=0;rotatable=0;part=1;html=1;" vertex="1" parent="LBTRWxyhz_comnBckgnT-57">
+          <mxGeometry y="30" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-59" value="D6&amp;nbsp; &amp;nbsp; Donation records" style="html=1;dashed=0;whiteSpace=wrap;shape=mxgraph.dfd.dataStoreID;align=left;spacingLeft=3;points=[[0,0],[0.5,0],[1,0],[0,0.5],[1,0.5],[0,1],[0.5,1],[1,1]];fontSize=13;verticalAlign=middle;" vertex="1" parent="1">
+          <mxGeometry x="30" y="-230" width="210" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-60" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.061;entryY=1.033;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="30" y="219.01" as="sourcePoint" />
+            <mxPoint x="32.809999999999945" y="-200" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-61" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0;exitDx=22.5;exitDy=0;exitPerimeter=0;strokeWidth=2;strokeColor=#f90606;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-20" target="LBTRWxyhz_comnBckgnT-57">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="230" as="sourcePoint" />
+            <mxPoint x="270" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="688" y="200" />
+              <mxPoint x="610" y="200" />
+              <mxPoint x="80" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-63" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=45;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="50" y="220" as="sourcePoint" />
+            <mxPoint x="100" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="50" y="125" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-65" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.345;entryY=-0.013;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-7" target="LBTRWxyhz_comnBckgnT-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-66" value="Donor request" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="220" y="100" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-67" value="New donor details" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="130" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-68" value="Donor details" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="215" y="-132" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-69" value="Donor record" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-40" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-70" value="Donation notification" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="510" y="100" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-71" value="Notification" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="700" y="-30" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-72" value="Notification" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="710" y="210" width="80" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-73" value="Donation response" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="215" y="168" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-74" value="Inventory data" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="260" y="218" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-75" value="" style="endArrow=classic;html=1;rounded=0;strokeWidth=2;strokeColor=#f60404;exitX=1.009;exitY=0.617;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="LBTRWxyhz_comnBckgnT-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="670" y="310" as="sourcePoint" />
+            <mxPoint x="662" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-76" value="Inventory updates" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="310" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-77" value="Blood request response" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="170" y="360" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-78" value="Patient request" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="418" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-79" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.028;entryY=0.368;entryDx=0;entryDy=0;entryPerimeter=0;strokeWidth=2;strokeColor=#f60404;" edge="1" parent="1" target="LBTRWxyhz_comnBckgnT-32">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="490" as="sourcePoint" />
+            <mxPoint x="120" y="456.5" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="140" y="442" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-80" value="New patient details" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="520" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-81" value="Patient details" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="340" y="648" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-82" value="Patient record" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="510" y="550" width="100" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-83" value="Request notification" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="650" y="430" width="130" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-84" value="Approved or&amp;nbsp;&lt;div&gt;rejected&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;request&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="75" y="648" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-85" value="Approved or&amp;nbsp;&lt;div&gt;rejected&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;request&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="110" y="405" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-86" value="Approved or&amp;nbsp;&lt;div&gt;rejected donation&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="30" y="-190" width="120" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-87" value="Approved or&amp;nbsp;&lt;div&gt;rejected&amp;nbsp;&lt;/div&gt;&lt;div&gt;donation&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="50" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-88" value="Updates inventory" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="540" y="268" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="LBTRWxyhz_comnBckgnT-89" value="Updates inventory" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="270" y="310" width="120" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
