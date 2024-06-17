@@ -34,13 +34,13 @@ class Patient(models.Model):
     user=models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE)
     profile_pic= models.ImageField(upload_to='profile_pic/Patient/',null=True,blank=True)
     
-    age=models.PositiveIntegerField()
-    bloodgroup=models.CharField(max_length=10)
-    disease=models.CharField(max_length=100)
-    doctorname=models.CharField(max_length=50)
+    age=models.PositiveIntegerField(default=0)
+    bloodgroup=models.CharField(max_length=10,default='')
+    
+    doctorname=models.CharField(max_length=50,default='')
 
-    address = models.CharField(max_length=40)
-    mobile = models.CharField(max_length=20,null=False)
+    address = models.CharField(max_length=40,default='')
+    mobile = models.CharField(max_length=20,null=False,default=0)
     disease=models.CharField(max_length=100,default="Nothing")
    
     @property

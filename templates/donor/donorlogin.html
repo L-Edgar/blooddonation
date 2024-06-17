@@ -33,7 +33,7 @@
                 <div class="card-body">
                     <form method="POST" action="{% url 'donor:donorlogin' %}">
                         {% csrf_token %}
-                        <div class="form-row">
+                     <div class="form-row">
                             <div class="name">Username</div>
                             <div class="value">
                                 <div class="input-group">
@@ -46,12 +46,12 @@
                             <div class="value">
                                 <div class="input-group">
                                     {% render_field loginform.password class="input--style-5" %}
+                                    {{loginform.password.errors}}
                                 </div>
                             </div>
                         </div>
 
-
-                        
+                   
 
                         <div>
                             <button class="btn btn--radius-2 btn-danger" type="submit">Login</button>

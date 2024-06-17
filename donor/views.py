@@ -24,42 +24,57 @@ from functools import wraps
 
 logger = logging.getLogger(__name__)
 
+def group_required(group_name):
+    def decorator(view_func):
+        def _wrapped_view(request, *args, **kwargs):
+            if request.user.is_authenticated and request.user.groups.filter(name=group_name).exists():
+                return view_func(request, *args, **kwargs)
+            return redirect('no_permission')  # Redirect to a no-permission page or a login page
+        return _wrapped_view
+    return decorator
+
+    
+
 def donorlogin(request):
     #messages.success(request,'')
+    loginform=forms.LoginForm()
     print(f"Request method: {request.method}")
     if request.method=='POST':
         
-        loginform=forms.DonorUserForm(request.POST)
-       # if loginform.is_valid():
-            
-        username=request.POST['username']
-        password=request.POST['password']
-        user=authenticate(request,username=username,password=password)
-        if user is not None and user.role=='donor':
-            login(request,user)
-            return redirect('donor:donor-dashboard')
+        loginform=forms.LoginForm(request,data=request.POST)
+        print(f"Form errors: {loginform.errors}")
+        print(f"Form data: {loginform.data}")
+        if loginform.is_valid():
+            print('Form is valid')
+            username=request.POST['username']
+            password=request.POST['password']
+            user=authenticate(request,username=username,password=password)
+            if user is not None and user.groups.filter(name='DONOR').exists():
+                login(request,user)
+                return redirect('donor:donor-dashboard')
+            else:
+                messages.info(request,'Invalid Credentials')
+                return redirect("donor:donorlogin")
         else:
-            messages.info(request,'Invalid Credentials')
-            return redirect("donor:donorlogin")
-        #else:
-           # print(f"Form errors: {loginform.errors}")
+            print(f"Form errors: {loginform.errors}")
             
     else:
-        loginform = forms.DonorUserForm()  # An unbound form
-        print("unsuccessful")
+        loginform = forms.LoginForm()  # An unbound form
+        print(loginform.errors)
+        print("Method is not post")
         
     return render(request,'donor/donorlogin.html',{'loginform':loginform})
 
 def donor_signup_view(request):
-    #userForm=forms.DonorUserForm()
-    
     userForm=forms.CustomUserCreationForm()
+    
+    #userForm=forms.CustomUserCreationForm()
     #donorForm=forms.DonorForm()
     mydict={'userForm':userForm}
     if request.method=='POST':
-        #userForm=forms.DonorUserForm(request.POST)
-        #donorForm=forms.DonorForm(request.POST,request.FILES)
         userForm=forms.CustomUserCreationForm(request.POST)
+        #donorForm=forms.DonorForm(request.POST,request.FILES)
+        #userForm=forms.CustomUserCreationForm(request.POST)
         if userForm.is_valid():
             #user=userForm.save()
             #user.set_password(user.password)
@@ -70,25 +85,30 @@ def donor_signup_view(request):
             #donor.save()
             #my_donor_group = Group.objects.get_or_create(name='DONOR')
             #my_donor_group[0].user_set.add(user)
-            password1=userForm.cleaned_data['password1']
-            password2=userForm.cleaned_data['password2']
-            username=userForm.cleaned_data['username']
+            #password1=userForm.cleaned_data['password1']
+            #password2=userForm.cleaned_data['password2']
+            #username=userForm.cleaned_data['username']
             print(userForm.cleaned_data)
-            if password1==password2:
-                 if forms.CustomUserCreationForm.Meta.model.objects.filter(username=username).exists():
-                    messages.error(request, 'Passwords do not match.')
+            #if password1==password2:
+                 #if forms.CustomUserCreationForm.Meta.model.objects.filter(username=username).exists():
+                # if User.objects.filter(username=username).exists():
+                    #messages.error(request, 'Username already taken.')
                     
-                    return render(request, 'patient/patientsignup.html', {'userForm': userForm})
+                    #return render(request, 'patient/patientsignup.html', {'userForm': userForm})
                     
-                 else:
-                    user = userForm.save(commit=False)
-                    user.role = 'donor'
-                    user.set_password(password1)
-                    user.save()
+                 #else:
+            user = userForm.save(commit=False)
+                    #user.role = 'donor'
+            #user.set_password(password)
+            user.set_password(userForm.cleaned_data['password1'])
+            user.save()
+            group = Group.objects.get(name='DONOR')
+            user.groups.add(group)
+            #my_donor_group[0].user_set.add(user)
                     
-                    return redirect('donor:donorlogin')
-            else:
-                print(userForm.errors)
+            return redirect('donor:donorlogin')
+            #else:
+             #   print(userForm.errors)
         else:
             messages.error(request,userForm.errors)
             #print(userForm.errors)
@@ -112,6 +132,7 @@ def check_donor_registration(view_func):
     return wrapper
 
 @login_required(login_url='donorlogin')
+@group_required('DONOR')
 def complete_registration(request):
     donor = models.Donor.objects.filter(user_id=request.user.id).first()
     
@@ -140,6 +161,7 @@ def complete_registration(request):
     return render(request,"donor/donor_registration.html",{"user_form":user_form})
 
 @login_required(login_url='donorlogin')
+@group_required('DONOR')
 def donor_dashboard_view(request):
     donor= models.Donor.objects.filter(user_id=request.user.id).first()
     if not donor:
@@ -161,6 +183,7 @@ def donor_dashboard_view(request):
 
 @login_required(login_url='donorlogin')
 @check_donor_registration
+@group_required('DONOR')
 def donate_blood_view(request):
     print("User ID:", request.user.id)
     
@@ -183,6 +206,7 @@ def donate_blood_view(request):
 
 @login_required(login_url='donorlogin')
 @check_donor_registration
+@group_required('DONOR')
 def donation_history_view(request):
     donor= models.Donor.objects.get(user_id=request.user.id)
     donations=models.BloodDonate.objects.all().filter(donor=donor)
@@ -192,6 +216,7 @@ def donation_history_view(request):
 
 @login_required(login_url='donorlogin')
 @check_donor_registration
+@group_required('DONOR')
 def make_request_view(request):
     request_form=bforms.RequestForm()
     if request.method=='POST':
@@ -208,6 +233,7 @@ def make_request_view(request):
 
 @login_required(login_url='donorlogin')
 @check_donor_registration
+@group_required('DONOR')
 def request_history_view(request):
     donor= models.Donor.objects.filter(user_id=request.user.id).first()
             
@@ -216,6 +242,8 @@ def request_history_view(request):
     
 
 @login_required(login_url='donorlogin')
+@check_donor_registration
+@group_required('DONOR')
 def donor_profile(request):
     donor= models.Donor.objects.filter(user_id=request.user.id).first()
     
